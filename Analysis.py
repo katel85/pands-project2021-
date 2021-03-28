@@ -4,22 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 
+def header (msg):
+    header('Read Iris Data into a df')
+filename = 'IrisDataSet.txt' # df stands for datafile
+df = pd.read_csv(filename)
 
-col=['sepal_length','sepal_width','petal_length','petal_width','type']
-iris=pd.read_csv("IrisDataSet.txt",names=col)
-print(iris)
+#print(df)
 
-iris_setosa=iris.loc[iris["type"]=="Iris-setosa"]
-iris_virginica=iris.loc[iris["type"]=="Iris-virginica"]
-iris_versicolor=iris.loc[iris["type"]=="Iris-versicolor"]
-print("Quantiles")
-print("setosa",np.percentile(iris_setosa["petal_length"],np.arange(0,100,25)))
-print("virginica",np.percentile(iris_virginica["petal_length"],np.arange(0,100,25)))
-print("versicolor",np.percentile(iris_versicolor["petal_length"],np.arange(0,100,25)))
-print("With some extra outlier")
-print("setosa",np.percentile(np.append(iris_setosa["petal_length"],500),np.arange(0,100,25)))
+print (df.describe())
 
-print("90th percentiles")
-print("seatosa",np.percentile(iris_setosa["petal_length"],90))
-print("virginca",np.percentile(iris_virginica["petal_length"],90))
-print("versicolor",np.percentile(iris_versicolor["petal_length"],90))
+# ref: https://www.youtube.com/watch?v=e60ItwlZTKM- Video 
+
+
