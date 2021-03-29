@@ -27,3 +27,11 @@ plt.show()
 
 sns.boxplot(x="species", y="petal_length", palette="husl", data=iris)
 plt.show()
+
+sns.violinplot(x="species", y="petal_length", palette="husl", data=iris)
+plt.show()
+
+sns.pairplot((iris),hue="species", palette="husl", height=3)
+plt.show()
+
+
