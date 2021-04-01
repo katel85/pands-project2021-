@@ -15,9 +15,9 @@ df = pd.read_csv(filename)
 # using boolean on the df
 df.loc[:,"species"] == 'setosa'
 
-print(df.loc[:,"species"] == 'setosa' )
+#print(df.loc[df.loc[:,"species"] == 'setosa' ])
 
-
+print (df.loc[df.loc[:,"species"] == 'versicolor' ])
 
 
 # ref: https://www.youtube.com/watch?v=e60ItwlZTKM- Video 
