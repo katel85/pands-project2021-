@@ -11,7 +11,14 @@ df = pd.read_csv(filename)
 
 #print(df)
 
-print (df.describe())
+#print (df.describe())
+# using boolean on the df
+df.loc[:,"species"] == 'setosa'
+
+print(df.loc[:,"species"] == 'setosa' )
+
+
+
 
 # ref: https://www.youtube.com/watch?v=e60ItwlZTKM- Video 
 
