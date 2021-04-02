@@ -1,23 +1,8 @@
 # pands-project2021-
 # Project for Programming and Scripting 2021 Course Ref: 52167
 
-Problem statement   
-
-This project concerns the well-known Fisher’s Iris data set [3]. You must research the data set
-and write documentation and code (in Python [1]) to investigate it. An online search for
-information on the data set will convince you that many people have investigated it
-previously. You are expected to be able to break this project into several smaller tasks that
-are easier to solve, and to plug these together after they have been completed.
-You might do that for this project as follows:
-    1. Research the data set online and write a summary about it in your README.
-    2. Download the data set and add it to your repository.
-    3. Write a program called analysis.py that:
-• outputs a summary of each variable to a single text file,
-• saves a histogram of each variable to png files, and
-• outputs a scatter plot of each pair of variables. 
-
-
-
 Backround on  the Fisher's Iris Data Set.
 
-The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis. Linear discriminant analysis is a data dimesion reduction technique.When you are dealing with multi-dimensional data, you have data that has a number of features that are correlated with each other. If we plot multi-dimensional data in two or three dimensions, we are using the dimensionality reduction technique
+In 1936, Fisher published a report titled “The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics.In this article, Fisher developed and evaluated a linear function to differentiate Iris species based on the morphology of their flowers. His evaluation was based on the measurement of the length and width of the petal and sepal (4 features) of three different species of the Iris flower. the species names were Iris setosa, Iris virginica and Iris versicolor.Fisher himself did not take the measurements this task was assigned to a fellow colleague of his named Edgar Anderson. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other. 
+
+[image](https://user-images.githubusercontent.com/77672629/113424805-aff8ea00-93c8-11eb-9f34-560952060ae5.png)
