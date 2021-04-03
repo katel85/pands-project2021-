@@ -6,7 +6,7 @@ import math
 
 def header (msg):
     header('Read Iris Data into a df')
-filename = 'IrisDataSet.txt' # df stands for datafile
+filename = 'IrisDataSet.txt' # df stands for dataframe
 df = pd.read_csv(filename)
 
 #print(df)
@@ -18,7 +18,6 @@ df.loc[:,"species"] == 'setosa'
 #print(df.loc[df.loc[:,"species"] == 'setosa' ])
 
 print (df.loc[df.loc[:,"species"] == 'versicolor' ])
-
 
 # ref: https://www.youtube.com/watch?v=e60ItwlZTKM- Video 
 
