@@ -63,5 +63,60 @@ ax[1].legend()
 plt.show()
 
 # looking at the plot from the above code Iris Setosa is easily distinguishable from the oher two species. Iris versicolor and virginica are quite comparable in these plots and would 
-# not be easily identified graphically here.
+# not be easily separted graphically here.
 
+# beloe is code for plotting all data of all species need to fix the naming on this
+
+
+plt.figure()
+
+fig,ax=plt.subplots(4,3,figsize=(17, 8))
+setosa["SepalLengthCm"].plot(kind="hist", ax=ax[0][0],label="setosa",color ='r',fontsize=10)
+versicolor["SepalLengthCm"].plot(kind="hist", ax=ax[0][1],label="versicolor",color='b',fontsize=10)
+virginica["SepalLengthCm"].plot( kind="hist",ax=ax[0][2],label="virginica",color='g',fontsize=10)
+
+setosa["SepalWidthCm"].plot(kind="hist", ax=ax[1][0],label="setosa",color ='r',fontsize=10)
+versicolor["SepalWidthCm"].plot(kind="hist", ax=ax[1][1],label="versicolor",color='b',fontsize=10)
+virginica["SepalWidthCm"].plot( kind="hist",ax=ax[1][2],label="virginica",color='g',fontsize=10)
+
+setosa["PetalLengthCm"].plot(kind="hist", ax=ax[2][0],label="setosa",color ='r',fontsize=10)
+versicolor["PetalLengthCm"].plot(kind="hist", ax=ax[2][1],label="versicolor",color='b',fontsize=10)
+virginica["PetalLengthCm"].plot( kind="hist",ax=ax[2][2],label="virginica",color='g',fontsize=10)
+
+
+setosa["PetalWidthCm"].plot(kind="hist", ax=ax[3][0],label="setosa",color ='r',fontsize=10)
+versicolor["PetalWidthCm"].plot(kind="hist", ax=ax[3][1],label="versicolor",color='b',fontsize=10)
+virginica["PetalWidthCm"].plot( kind="hist",ax=ax[3][2],label="virginica",color='g',fontsize=10)
+
+plt.rcParams.update({'font.size': 10})
+plt.tight_layout()
+
+ax[0][0].set(title='SepalLengthCm')
+ax[0][1].set(title='SepalLengthCm')
+ax[0][2].set(title='SepalLengthCm')
+ax[1][0].set(title='SepalWidthCm ')
+ax[1][1].set(title='SepalWidthCm ')
+ax[1][2].set(title='SepalWidthCm ')
+ax[2][0].set(title='PetalLengthCm')
+ax[2][1].set(title='PetalLengthCm ')
+ax[2][2].set(title='PetalLengthCm')
+ax[3][0].set(title='PetalWidthCm')
+ax[3][1].set(title='PetalWidthCm')
+ax[3][2].set(title='PetalWidthCm')
+
+ax[0][0].legend()
+ax[0][1].legend()
+ax[0][2].legend()
+ax[1][0].legend()
+ax[1][1].legend()
+ax[1][2].legend()
+ax[2][0].legend()
+ax[2][1].legend()
+ax[2][2].legend()
+ax[3][0].legend()
+ax[3][1].legend()
+ax[3][2].legend()
+
+
+plt.show()
+plt.close()
