@@ -1,4 +1,4 @@
-# Create separate output files for each of the variables in the Fisher Iris Data Set
+# Create summary txt output files for each of the variables in the Fisher Iris Data Set
 # Author Catherine Leddy
 
 import sys
@@ -25,6 +25,7 @@ set = str(setosa.describe())
 ver = str (versicolor.describe())
 gin = str(virginica.describe())
 
+# check to see if all the species+variables are printed correctly.
 #print ("IRIS DATA SET SUMMARY")
 #print (data)
 #print ("SETOSA DETAILS")
@@ -47,4 +48,3 @@ file.write(gin)
 file.close()
 
 # Ref https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
-
