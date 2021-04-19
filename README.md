@@ -16,6 +16,23 @@ Linear Discriminant Analysis(LDA) is a very common technique used for supervised
 
 Linear Discriminant Analysis is a dimensionality reduction technique used as a preprocessing step in Machine Learning and pattern classification applications. The main goal of dimensionality reduction techinques is to reduce the dimensions by removing the reduntant and dependent features by transforming the features from higher dimensional space to a space with lower dimensions. In simple terms, discriminant function analysis is classification - the act of distributing things into groups, classes or categories of the same type.
 
+**What is Python and why use this application for analysing Data**
+
+Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.
+
+Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).
+
+For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions.
+
+
+**References:**
+
+What is Python for Data Analysis? <https://www.sisense.com/glossary/python-for-data-analysis/>
+Iris Data <https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2>
+
+
+
+
 
 
 
