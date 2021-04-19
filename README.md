@@ -1,22 +1,20 @@
 # pands-project2021-
 Project for Programming and Scripting 2021 Course Ref: 52167
 
-# Backround on  the Fisher's Iris Data Set.
+# Backround on the Fisher's Iris Data Set.
 
-In 1936, Fisher published a report titled “The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. In this article, Fisher developed and evaluated a linear function to differentiate Iris species based on the morphology of their flowers. His evaluation was based on the measurement of the length and width of the petal and sepal (4 features) of three different species of the Iris flower. The species names were Iris setosa, Iris virginica and Iris versicolor.Fisher himself did not take the measurements this task was assigned to a fellow colleague of his Dr Edgar Anderson. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other. 
+The Fisher Iris Data Set is the measurements of the sepal length and width and petal length and width in centimetres of fifty plants for each of three types of iris; Iris setosa, Iris versicolor and Iris virginica. Although the data were collected by Dr. Edgar Anderson, R. A. Fisher published the data on Iris setosa and Iris versicolor to demonstrate the use of discriminant functions. The Iris virginica data are used to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.
+
 
 ![](IRIS%20FLOWERS.png)
 
+**What is Linear Discriminant Analysis:**
 
-As shown in the above image, there are indeed similarities in morphology between these species. Thus, it’s interesting to note that the discriminant function developed by Sir Fisher in the 30s could solve this problem neatly from a statistical perspective. However, botanists have a better way to tell the difference between these species. In fact, Dr. Anderson himself published a manuscript titled “The Species Problems in Iris” to discuss the discrimination of Iris species. In the article, Dr. Anderson noted that the morphology of the seeds of these flowers was more informative. There is a noticeable difference in the seed size between these three species, in addition to the difference in the sizes of their petals and sepals.
-
-
-**Linear Discriminant Analysis:**
+Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. It is, of course, entirely appropriate and in the spirit of scientific inquiry to make and publish comparisons of models and their performance on common data sets and the pattern recognition community has used Iris in perhaps a thousand papers for just this reason.
 
 Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Lets understand what is LDA and how does it work.
 
-Linear Discriminant Analysis is a dimensionality reduction technique used as a preprocessing step in Machine Learning and pattern classification applications.
-The main goal of dimensionality reduction techinques is to reduce the dimensions by removing the reduntant and dependent features by transforming the features from higher dimensional space to a space with lower dimensions. 
+Linear Discriminant Analysis is a dimensionality reduction technique used as a preprocessing step in Machine Learning and pattern classification applications. The main goal of dimensionality reduction techinques is to reduce the dimensions by removing the reduntant and dependent features by transforming the features from higher dimensional space to a space with lower dimensions. In simple terms, discriminant function analysis is classification - the act of distributing things into groups, classes or categories of the same type.
 
 
 
