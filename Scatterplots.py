@@ -13,7 +13,7 @@ filename = 'IrisDataSet.txt' # df stands for dataframe
 df = pd.read_csv(filename) 
 
 
-
+#Multivariate Analysis:
 sns.pairplot (df, hue = 'species')
 
 plt.show()
