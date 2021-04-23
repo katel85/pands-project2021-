@@ -18,7 +18,7 @@ Linear Discriminant Analysis is a dimensionality reduction technique used as a p
 
 **What is Python and what is it used for:**
 
-Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions.
+Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions. For this project Python version 3.8.5 was used.
 
 Python is a general-purpose coding language—which means that, unlike HTML, CSS, and JavaScript, it can be used for other types of programming and software development besides web development. That includes back end development, software development, data science and writing system scripts among other things. 
 
@@ -33,6 +33,33 @@ The application we used Python for in this course was scripting and data science
 
 **Analysing Fisher's Iris Dataset Using Python**
 
+**Applications used:**
+
+CMDER- CMDER is a free software package, portable console emulator specifically for Windows. CMDER is a great utility for developers and coders. It is used primarily for running scripts but has many more functions. I cloned my respiratory for the project from github through cmder and saved it onto my machine.
+
+VSCODE- Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. All code for this project was written though this application. It is an amazing platform for someone beginning their programming/scripting journey as it is incredibly user friendly.
+
+GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine. Ref :https://guides.github.com/introduction/git-handbook/#:~:text=GitHub%20is%20a%20Git%20hosting,apps%20in%20the%20GitHub%20Marketplace.
+
+**Dataset Code and Analysis:**
+
+In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python. Ref: https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library
+
+import sys
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+import pandas as pd
+
+import seaborn as sns
+
+
+
+
+
+
 
 
 
@@ -40,6 +67,8 @@ The application we used Python for in this course was scripting and data science
 
 What is Python for Data Analysis? <https://www.sisense.com/glossary/python-for-data-analysis/>
 Iris Data <https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2>
+<https://skillcrush.com/blog/what-is-python/>
+
 
 
 
