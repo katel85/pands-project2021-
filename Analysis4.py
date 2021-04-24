@@ -65,7 +65,7 @@ plt.show()
 # looking at the plot from the above code Iris Setosa is easily distinguishable from the oher two species. Iris versicolor and virginica are quite comparable in these plots and would 
 # not be easily separted graphically here.
 
-# beloe is code for plotting all data of all species need to fix the naming on this
+# below is code for plotting all data of all species need to fix the naming on this
 
 
 plt.figure()

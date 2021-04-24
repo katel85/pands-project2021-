@@ -18,7 +18,7 @@ Linear Discriminant Analysis is a dimensionality reduction technique used as a p
 
 **What is Python and what is it used for:**
 
-Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions. For this project Python version 3.8.5 was used.
+Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions. For this project Python version used was 3.8.5.
 
 Python is a general-purpose coding language—which means that, unlike HTML, CSS, and JavaScript, it can be used for other types of programming and software development besides web development. That includes back end development, software development, data science and writing system scripts among other things. 
 
@@ -41,19 +41,51 @@ VSCODE- Visual Studio Code is a freeware source-code editor made by Microsoft fo
 
 GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine. Ref :https://guides.github.com/introduction/git-handbook/#:~:text=GitHub%20is%20a%20Git%20hosting,apps%20in%20the%20GitHub%20Marketplace.
 
-**Dataset Code and Analysis:**
+# Dataset Code and Analysis:
+
+**Libraries Used**
 
 In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python. Ref: https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library
 
-import sys
+**Matplotlib**-is a comprehensive library for creating static, animated, and interactive visualizations in Python"
 
-import matplotlib.pyplot as plt
+**Numpy**-is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays. It is the fundamental package for scientific computing with Python.
 
-import numpy as np
+**Pandas**-is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
 
-import pandas as pd
+**Seaborn**- is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
 
-import seaborn as sns
+
+
+**Dataset Download and Import:**
+
+The start of analysis requires us to download this Iris dataset. This was taken from UCI Machine Learning Respository. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import. The dataset can be printed out as a data array set. Why researching the dataset I dounf another way to download the dataset was through Seaborn as this has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
+
+![](Plots/IrisDatasetImport.png)
+
+
+
+**Summary of each variable:**
+
+The describe() function computes a summary of statistics pertaining to the DataFrame columns. The three species were also separated defined to get their summary statistics also.
+
+![](Plots/SummaryStat.png)
+
+![](Plots/Summarytxt.png)
+
+![](Plots/Summaryoutput.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

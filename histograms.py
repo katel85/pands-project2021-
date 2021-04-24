@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-filename = 'IrisDataSet.txt' # df stands for dataframe
-df = pd.read_csv(filename) # this will read the data in as csv format from the txt file and
+filename = 'IrisDataSet.txt'    # df stands for dataframe
+df = pd.read_csv(filename)      # this will read the data in as csv format from the txt file and
 # we will then base all of our analysis from this table.
 
 #print(df.describe)
@@ -71,6 +71,8 @@ plt.title("species")
 plt.xlabel("species")
 plt.ylabel("Count")
 plt.show()
+
+
 
 
 

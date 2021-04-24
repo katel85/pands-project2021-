@@ -1,11 +1,9 @@
 # Create summary txt output files for each of the variables in the Fisher Iris Data Set
 # Author Catherine Leddy
 
-import sys
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.datasets import load_iris
 import seaborn as sns
 
 filename = 'IrisDataSet.txt' # df stands for dataframe
