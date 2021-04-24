@@ -71,22 +71,22 @@ plt.show()
 plt.figure()
 
 fig,ax=plt.subplots(4,3,figsize=(17, 8))
-setosa["SepalLengthCm"].plot(kind="hist", ax=ax[0][0],label="setosa",color ='r',fontsize=10)
-versicolor["SepalLengthCm"].plot(kind="hist", ax=ax[0][1],label="versicolor",color='b',fontsize=10)
-virginica["SepalLengthCm"].plot( kind="hist",ax=ax[0][2],label="virginica",color='g',fontsize=10)
+setosa["sepal_length"].plot(kind="hist", ax=ax[0][0],label="setosa",color ='r',fontsize=10)
+versicolor["sepal_length"].plot(kind="hist", ax=ax[0][1],label="versicolor",color='b',fontsize=10)
+virginica["sepal_length"].plot( kind="hist",ax=ax[0][2],label="virginica",color='g',fontsize=10)
 
-setosa["SepalWidthCm"].plot(kind="hist", ax=ax[1][0],label="setosa",color ='r',fontsize=10)
-versicolor["SepalWidthCm"].plot(kind="hist", ax=ax[1][1],label="versicolor",color='b',fontsize=10)
-virginica["SepalWidthCm"].plot( kind="hist",ax=ax[1][2],label="virginica",color='g',fontsize=10)
+setosa["sepal_width"].plot(kind="hist", ax=ax[1][0],label="setosa",color ='r',fontsize=10)
+versicolor["sepal_width"].plot(kind="hist", ax=ax[1][1],label="versicolor",color='b',fontsize=10)
+virginica["sepal_width"].plot( kind="hist",ax=ax[1][2],label="virginica",color='g',fontsize=10)
 
-setosa["PetalLengthCm"].plot(kind="hist", ax=ax[2][0],label="setosa",color ='r',fontsize=10)
-versicolor["PetalLengthCm"].plot(kind="hist", ax=ax[2][1],label="versicolor",color='b',fontsize=10)
-virginica["PetalLengthCm"].plot( kind="hist",ax=ax[2][2],label="virginica",color='g',fontsize=10)
+setosa["petal_length"].plot(kind="hist", ax=ax[2][0],label="setosa",color ='r',fontsize=10)
+versicolor["petal_length"].plot(kind="hist", ax=ax[2][1],label="versicolor",color='b',fontsize=10)
+virginica["petal_length"].plot( kind="hist",ax=ax[2][2],label="virginica",color='g',fontsize=10)
 
 
-setosa["PetalWidthCm"].plot(kind="hist", ax=ax[3][0],label="setosa",color ='r',fontsize=10)
-versicolor["PetalWidthCm"].plot(kind="hist", ax=ax[3][1],label="versicolor",color='b',fontsize=10)
-virginica["PetalWidthCm"].plot( kind="hist",ax=ax[3][2],label="virginica",color='g',fontsize=10)
+setosa["petal_width"].plot(kind="hist", ax=ax[3][0],label="setosa",color ='r',fontsize=10)
+versicolor["petal_width"].plot(kind="hist", ax=ax[3][1],label="versicolor",color='b',fontsize=10)
+virginica["petal_width"].plot( kind="hist",ax=ax[3][2],label="virginica",color='g',fontsize=10)
 
 plt.rcParams.update({'font.size': 10})
 plt.tight_layout()
@@ -120,3 +120,19 @@ ax[3][2].legend()
 
 plt.show()
 plt.close()
+
+
+
+plt.figure()
+sns.distplot(setosa["sepal_length"])
+sns.distplot(setosa["sepal_length"],bins=20, kde=False, color='#0055FF', label='Setosa')
+sns.distplot(versicolor["sepal_length"])
+sns.distplot(versicolor["sepal_length"],bins=20, kde=False,color= '#FFAA00', label='Versicolor')
+sns.distplot(virginica["sepal_length"])
+sns.distplot(virginica["sepal_length"],bins=20, kde=False,color= '#00AA00', label='Virginica')
+plt.legend()
+plt.title("Sepal Length for different Species")
+plt.xlabel("Sepal Length")
+plt.ylabel("Distribution of Sepal length")
+
+plt.show()
