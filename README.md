@@ -1,7 +1,7 @@
 # pands-project2021-
 Project for Programming and Scripting 2021 Course Ref: 52167
 
-# Backround on the Fisher's Iris Data Set.
+## Backround on the Fisher's Iris Data Set.
 
 The Fisher Iris Data Set is the measurements of the sepal length and width and petal length and width in centimetres of fifty plants for each of three types of iris; Iris setosa, Iris versicolor and Iris virginica. Although the data were collected by Dr. Edgar Anderson, R. A. Fisher published the data on Iris setosa and Iris versicolor to demonstrate the use of discriminant functions. The Iris virginica data are used to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.
 
@@ -31,7 +31,7 @@ The application we used Python for in this course was scripting and data science
 - Automation is another area where it pays to learn Python. Python’s ability to write system scripts means you can create simple Python programs to automate mindless tasks that eat away at your productivity. The time you’ll save by knowing how to automate processes with Python is a huge selling point for learning the language.
 
 
-**Analysing Fisher's Iris Dataset Using Python**
+## Analysing Fisher's Iris Dataset Using Python
 
 **Applications used:**
 
@@ -65,15 +65,35 @@ The start of analysis requires us to download this Iris dataset. This was taken 
 
 
 
-**Summary of each variable:**
+## Summary of each variable:
 
 The describe() function computes a summary of statistics pertaining to the DataFrame columns. The three species were also separated defined to get their summary statistics also.
 
-![](Plots/SummaryStat.png)
-
-![](Plots/Summarytxt.png)
-
 ![](Plots/Summaryoutput.png)
+
+
+## Histogram of each variable type:
+
+The Histograms show us the range in centimetres(cm) for each of the variables and the frequency these occur in the dataset. The code written was for histograms for each individual variable. The second type of histogram code written was for each varibale of every species. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable.
+
+![](Plots/Variable_Histograms.png))
+
+![](Plots/Petal_Length%20Distplot.png)
+
+![](Plots/Petal_Width%20Distplot.png)
+
+
+## Scatterplots for Pairs of Variables:
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,9 +117,14 @@ The describe() function computes a summary of statistics pertaining to the DataF
 
 **References:**
 
-What is Python for Data Analysis? <https://www.sisense.com/glossary/python-for-data-analysis/>
+What is Python for Data Analysis? 
+
+<https://www.sisense.com/glossary/python-for-data-analysis/>
+
 Iris Data <https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2>
 <https://skillcrush.com/blog/what-is-python/>
+
+<https://www.markdownguide.org/basic-syntax/>
 
 
 
