@@ -76,14 +76,29 @@ The describe() function computes a summary of statistics pertaining to the DataF
 
 The Histograms show us the range in centimetres(cm) for each of the variables and the frequency these occur in the dataset. The code written was for histograms for each individual variable. The second type of histogram code written was for each varibale of every species. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable.
 
-![](Plots/Variable_Histograms.png))
+![](Plots/Variable_Histograms.png)
 
 ![](Plots/Petal_Length%20Distplot.png)
 
 ![](Plots/Petal_Width%20Distplot.png)
 
 
-## Scatterplots for Pairs of Variables:
+## Scatterplots of each Pair of Variables:
+
+Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. The second scatter plot generated is seen below. Here the code is species specific and Iris Setosa is easily distinguished from The other two species. The petal width and lenth scatterplot is better at distinguishing the three speccies type although there is some over lap between Iris Vericolour and Iris Virginica.
+
+![](Plots/Scatterplot%20PairVar%20Species.png)
+
+The pairplot generated below is incredibly descriptive and pairs all variables together. It is interesting to see how the scatterplot will change when the same variables are used in the scatterplot but placed on different axis. In every paired plot here Iris setosa can be easily identified among the other two species. 
+
+![](Plots/sns.pairplot.png)
+
+
+Observations:
+
+- petal_length and petal_width are the most useful features to identify various flower types.
+- While Setosa can be easily identified (linearly separable), Virnica and Versicolor have some overlap (almost linearly separable).
+- We can find “lines” and “if-else” conditions to build a simple model to classify the flower types.
 
 
 

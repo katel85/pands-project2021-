@@ -4,8 +4,6 @@
 # Species is also a variable in this dataset so we will create a histogram for this although it will be quite boring to look at!
 # This means we are going to create 5 histograms for the above variables.
 
-#https://web.microsoftstream.com/video/f8fbdd37-3586-4f0d-82c4-7bda05470ff4
-# code adapted from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 
 #First we need to read in the dataset to get the information in order to plot the histograms
 #We will need pandas to do this.
@@ -29,7 +27,7 @@ virginica=df[df['species']=='virginica']
 
 #names of variables
 #names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
-
+#code adapted from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 plt.figure(figsize = (5, 5))
 x = df["sepal_length"]
   
@@ -37,6 +35,7 @@ plt.hist(x, bins = 10, color = "g")
 plt.title("Sepal Length in cm")
 plt.xlabel("Sepal_Length_cm")
 plt.ylabel("Count")
+plt.savefig("Hist Sepal length.png")
 plt.show()
 
 plt.figure(figsize = (5, 5))
@@ -46,6 +45,7 @@ plt.hist(x, bins = 10, color = "b")
 plt.title("Sepal Width in cm")
 plt.xlabel("Sepal_Width_cm")
 plt.ylabel("Count")
+plt.savefig("Hist Sepal Width.png")
 plt.show()
 
 plt.figure(figsize = (5, 5))
@@ -55,6 +55,7 @@ plt.hist(x, bins = 10, color = "m")
 plt.title("Petal Length in cm")
 plt.xlabel("Petal_Length_cm")
 plt.ylabel("Count")
+plt.savefig("Hist Petal length.png")
 plt.show()
 
 
@@ -65,11 +66,12 @@ plt.hist(x, bins = 10, color = "r")
 plt.title("Petal Width in cm")
 plt.xlabel("Petal_Width_cm")
 plt.ylabel("Count")
+plt.savefig("Hist Petal Width.png")
 plt.show()
 
 
-plt.figure(figsize = (5, 5))
-x = df["species"]
+#plt.figure(figsize = (5, 5))
+#x = df["species"]
 
 #plt.hist(x, bins = 5, color = "c")
 #plt.title("species")
@@ -82,6 +84,7 @@ x = df["species"]
 plt.figure()
 
 fig,ax=plt.subplots(4,3,figsize=(17, 8))
+
 setosa["sepal_length"].plot(kind="hist", ax=ax[0][0],label="setosa",color ='r',fontsize=10)
 versicolor["sepal_length"].plot(kind="hist", ax=ax[0][1],label="versicolor",color='b',fontsize=10)
 virginica["sepal_length"].plot( kind="hist",ax=ax[0][2],label="virginica",color='g',fontsize=10)
@@ -134,12 +137,10 @@ plt.close()
 
 
 # Although the species specific histograms are more useful to visualize the data it would be better to superimpose these
-# counts per species on one histogram plt per variable as below with the displot and the kde .
-#KDE can produce a plot that is less cluttered and more interpretable, especially when drawing multiple distributions.
-# KDE is particularly useful here as there is quite a bit of overlap in the distributions int he histogram plots. I changed different
+# counts per species on one histogram plt per variable as below with the displot and the kde .I changed different 
 # components like the colour and bin number but found the kde component the best to distinguish the species.
-#FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function 
-#with similar flexibility) or `histplot` (an axes-level function for histograms). I did update the code to change the displot with
+# FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function 
+# with similar flexibility) or `histplot` (an axes-level function for histograms). I did update the code to change the displot with
 # histplot and displot. But the putput was not as aesthetically pleasing I kept the code as distplot.
 
 
@@ -199,10 +200,13 @@ plt.xlabel("Petal Width in cm")
 plt.ylabel("Distribution of Petal Width")
 
 plt.show()
+plt.close()
 
 
 #https://seaborn.pydata.org/tutorial/distributions.html
 # https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1
 #https://seaborn.pydata.org/generated/seaborn.kdeplot.html
+#https://web.microsoftstream.com/video/f8fbdd37-3586-4f0d-82c4-7bda05470ff4
+#code adapted from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 
 
