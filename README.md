@@ -7,15 +7,17 @@
 This project concerns the well-known Fisher’s Iris data set. You must research the data set
 and write documentation and code in Python to investigate it.Research the data set online and 
 
-[1]. write a summary about it in your README.
+[1]. Write a summary about it in your README.
+
 [2]. Download the data set and add it to your repository.
+
 [3]. Write a program called analysis.py that:
 
 - outputs a summary of each variable to a single text file,
 -  saves a histogram of each variable to png files, and
 - outputs a scatter plot of each pair of variables. 
 
-## Backround on the Fisher's Iris Data Set.
+## Summary of the Fisher's Iris Data Set.
 
 The Fisher Iris Data Set is the measurements of the sepal length and width and petal length and width in centimetres of fifty plants for each of three types of iris; Iris setosa, Iris versicolor and Iris virginica. Although the data were collected by Dr. Edgar Anderson, R. A. Fisher published the data on Iris setosa and Iris versicolor to demonstrate the use of discriminant functions. The Iris virginica data are used to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.
 
@@ -123,8 +125,24 @@ The second scatter plot generated is seen above. Here the code is species specif
 
 ![](Plots/Correlationstats.png)
 
+The above figure shows the correlation statistics between all the variable. Perfect positive correction would produce a number of 1. As seen above when the variable is compared against itself. However there are three main variables with high positive correlation.
 
 
+  [1] Petal Width and Petal Length (0.96)
+
+  [2] Petal Length and Sepal Length (0.87)
+
+  [3] Petal Width and Sepal Length (0.81)
+
+
+  ![](Plots/ImplotPETALPETAL.png)
+
+  The lmplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:
+
+  ![](Plots/lmplotPetalSepal.png)
+
+  The lmplot above shows the two variables that showed the least correlation. The sepal width and the petal length. 
+ 
 
 
 ![](Plots/sns.pairplot.png)
@@ -135,7 +153,8 @@ Observations:
 
 - Petal_length and petal_width are the most useful features to identify various flower types.
 - While Setosa can be easily identified (linearly separable), Virginica and Versicolor have some overlap (almost linearly separable).
-- We can find “lines” and “if-else” conditions to build a simple model to classify the flower types.
+
+
 
 
 

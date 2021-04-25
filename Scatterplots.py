@@ -51,10 +51,6 @@ setosa.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],label='se
 versicolor.plot(x="petal_length",y="petal_width",kind="scatter",ax=ax[1],label='versicolor',color='b')
 virginica.plot(x="petal_length", y="petal_width", kind="scatter", ax=ax[1], label='virginica', color='g')
 
-
-
-
-
 ax[0].set(title='Sepal comparasion ', ylabel='sepal-width')
 ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
 ax[0].legend()
@@ -63,6 +59,8 @@ ax[1].legend()
 
 # Correlation between variables
 print(df.corr(method='pearson'))
+
+#https://www.datacamp.com/community/tutorials/introduction-machine-learning-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-299261629574:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=20487&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFMqV46OWTzY86tg_8vc0yBOr_Z2-IGgk8fhj_zxq5z-agq1-nRwRbYaAtOeEALw_wcB
 
 
 #sns.scatterplot(x='sepal_length', y='sepal_width', data=df, hue='species')
@@ -87,11 +85,17 @@ print(df.corr(method='pearson'))
 #fig=sns.stripplot(x='species',y='sepal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
 #plt.show()
 
-plt.figure()
-sns.stripplot(x='species',y='petal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
-plt.show()
+#plt.figure()
+#sns.stripplot(x='species',y='petal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
+#plt.show()
 
-
+# https://medium.com/@neuralnets/data-visualization-with-python-and-seaborn-part-1-29c9478a8700
 
 
 #sns.stripplot(x='Species',y='SepalLengthCm',data=iris,jitter=True,edgecolor='gray')
+plt.figure(figsize = (4, 4))
+sns.lmplot(x="petal_length", y="sepal_length",data=df)
+sns.lmplot(x="petal_length", y="sepal_width", data=df)
+plt.show()
+
+# code adapted from https://seaborn.pydata.org/tutorial/regression.html
