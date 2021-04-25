@@ -35,7 +35,7 @@ ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
 ax[0].legend()
 ax[1].legend()
 
-plt.show()
+#plt.show()
 #plt.close
 
 # https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
@@ -59,7 +59,11 @@ ax[0].set(title='Sepal comparasion ', ylabel='sepal-width')
 ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
 ax[0].legend()
 ax[1].legend()
-plt.show()
+#plt.show()
+
+# Correlation between variables
+print(df.corr(method='pearson'))
+
 
 #sns.scatterplot(x='sepal_length', y='sepal_width', data=df, hue='species')
 #plt.title("Sepal Length vs Sepal Width") 
@@ -69,7 +73,25 @@ plt.show()
 
 
 #Multivariate Analysis:
-sns.pairplot (df, hue = 'species')
+#sns.pairplot (df, hue = 'species')
 
+#plt.show()
+
+#sns.set(style='whitegrid')
+#sns.swarmplot(x="species", y="petal_length", data=df)
+#plt.show()
+
+
+#fig=plt.gcf()
+#fig.set_size_inches(10,7)
+#fig=sns.stripplot(x='species',y='sepal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
+#plt.show()
+
+plt.figure()
+sns.stripplot(x='species',y='petal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
 plt.show()
 
+
+
+
+#sns.stripplot(x='Species',y='SepalLengthCm',data=iris,jitter=True,edgecolor='gray')

@@ -134,7 +134,8 @@ ax[3][2].legend()
 
 plt.show()
 plt.close()
-
+#https://seaborn.pydata.org/tutorial/distributions.html
+# https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1
 
 # Although the species specific histograms are more useful to visualize the data it would be better to superimpose these
 # counts per species on one histogram plt per variable as below with the displot and the kde .I changed different 
