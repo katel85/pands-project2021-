@@ -1,6 +1,21 @@
 # Pands-project2021-G00048625
 
-## Project Brief:
+- [Pands-project2021-G00048625](#pands-project2021-g00048625)
+  - [**Project Brief:**](#project-brief)
+  - [Summary of Fisher's Iris Data Set.](#summary-of-fishers-iris-data-set)
+  - [**What is Python and what is it used for:**](#what-is-python-and-what-is-it-used-for)
+  - [**Analysing Fisher's Iris Dataset Using Python:**](#analysing-fishers-iris-dataset-using-python)
+    - [**Applications used:**](#applications-used)
+- [Iris Dataset Code and Analysis:](#iris-dataset-code-and-analysis)
+  - [Libraries Used:](#libraries-used)
+    - [Dataset Download and Import:](#dataset-download-and-import)
+    - [Summary of each variable:](#summary-of-each-variable)
+    - [Histogram of each variable type:](#histogram-of-each-variable-type)
+    - [Scatterplots of each Pair of Variables:](#scatterplots-of-each-pair-of-variables)
+- [**References:**](#references)
+
+
+## **Project Brief:**
 
 **Problem statement:**
 
@@ -14,32 +29,32 @@ and write documentation and code in Python to investigate it.Research the data s
 [3]. Write a program called analysis.py that:
 
 - outputs a summary of each variable to a single text file,
--  saves a histogram of each variable to png files, and
+- saves a histogram of each variable to png files, and
 - outputs a scatter plot of each pair of variables. 
 
-## Summary of the Fisher's Iris Data Set.
+## Summary of Fisher's Iris Data Set.
 
-The Fisher Iris Data Set is the measurements of the sepal length and width and petal length and width in centimetres of fifty plants for each of three types of iris; Iris setosa, Iris versicolor and Iris virginica. Although the data were collected by Dr. Edgar Anderson, R. A. Fisher published the data on Iris setosa and Iris versicolor to demonstrate the use of discriminant functions. The Iris virginica data are used to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.
+The Fisher Iris Data Set is multivariate dataset . The data set  is the measurement of the length and width of both sepals and petals of three different species of the Iris flower (Setosa, Versicolor and Virginica) . In total there are 150 measurements. The British statistician and biologist Ronald Fisher published this dataset in his 1936 paper “The use of multiple measurements in taxonomic problems” as an example of linear discriminant analysis. Initially data was only collected for two of the species (Setosa and Versicolor) to demonstate the dicriminant analysis. The Iris virginica data was collected to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.[1]. This is perhaps the best known database to be found in the pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. If you search for Iris Dataset on google you will actually get 3.9 million results. That alone will tell us how often this dataset is being used and researched by others. The reasons this dataset is so often used is: 
+
+-   Iris dataset contains 150 observations, it is small and simple but not trivial. For beginners this is a great place to start and learn some simple tricks to plot and analyze data.
+
+- The task it poses of discriminating between three species of Iris from measurements of their petals and sepals is simple but challenging.
+
+- The data are real data, but apparently of good quality. In principle and in practice, test datasets could be synthetic and that might be necessary or useful to make a point. Nevertheless, few people object to real data.
 
 
 
 ![](IRIS%20FLOWERS.png)
 
-**What is Linear Discriminant Analysis:**
+As previously mentioned Fisher used this dataset as an example of linear discriminant analysis (LCA). LCA is a method used in statistics and other fields, to find a linear combination of features that characterizes or separates two or more classes of objects or events. Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. It is, of course, entirely appropriate and in the spirit of scientific inquiry to make and publish comparisons of models and their performance on common data sets and the pattern recognition community has used Iris in perhaps a thousand papers for just this reason.
+ 
+## **What is Python and what is it used for:**
 
-Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. It is, of course, entirely appropriate and in the spirit of scientific inquiry to make and publish comparisons of models and their performance on common data sets and the pattern recognition community has used Iris in perhaps a thousand papers for just this reason.
-
-Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Lets understand what is LDA and how does it work.
-
-Linear Discriminant Analysis is a dimensionality reduction technique used as a preprocessing step in Machine Learning and pattern classification applications. The main goal of dimensionality reduction techinques is to reduce the dimensions by removing the reduntant and dependent features by transforming the features from higher dimensional space to a space with lower dimensions. In simple terms, discriminant function analysis is classification - the act of distributing things into groups, classes or categories of the same type.
-
-**What is Python and what is it used for:**
-
-Python is a popular multi-purpose programming language widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions. For this project Python version used was 3.8.5.
+Python is a popular multi-purpose **programming language** widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions.[2]
 
 Python is a general-purpose coding language—which means that, unlike HTML, CSS, and JavaScript, it can be used for other types of programming and software development besides web development. That includes back end development, software development, data science and writing system scripts among other things. 
 
-The application we used Python for in this course was scripting and data science. The  objective of this course was to become comfortable with coding and used the python languauge to do this.Even though python is versatile and powerful its is relatively easy to  learn the lauguage. Several reasons for this are:
+The application we used Python for in this course was scripting and data science. The  objective of this course was to become comfortable with coding and used the python languauge to do this.Even though python is versatile and powerful its is relatively easy to learn. Several reasons for this are:
 
 - Python basics (things like Python’s syntax, keywords, and data types) can be learned in as little as 6-8 weeks.
 - You can learn python basics for free. There are several python sites such as the python software foundation that offer free tutorials for beginners.
@@ -48,21 +63,21 @@ The application we used Python for in this course was scripting and data science
 - Automation is another area where it pays to learn Python. Python’s ability to write system scripts means you can create simple Python programs to automate mindless tasks that eat away at your productivity. The time you’ll save by knowing how to automate processes with Python is a huge selling point for learning the language.
 
 
-## Analysing Fisher's Iris Dataset Using Python
+## **Analysing Fisher's Iris Dataset Using Python:**
 
-**Applications used:**
+### **Applications used:**
 
 CMDER- CMDER is a free software package, portable console emulator specifically for Windows. CMDER is a great utility for developers and coders. It is used primarily for running scripts but has many more functions. I cloned my respiratory for the project from github through cmder and saved it onto my machine.
 
 VSCODE- Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. All code for this project was written though this application. It is an amazing platform for someone beginning their programming/scripting journey as it is incredibly user friendly.
 
-GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine. Ref :https://guides.github.com/introduction/git-handbook/#:~:text=GitHub%20is%20a%20Git%20hosting,apps%20in%20the%20GitHub%20Marketplace.
+GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine.[3] 
 
-# Dataset Code and Analysis:
+# Iris Dataset Code and Analysis:
 
-**Libraries Used:**
+## Libraries Used:
 
-In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python. Ref: https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library
+In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python.[4]
 
 **Matplotlib**-is a comprehensive library for creating static, animated, and interactive visualizations in Python"
 
@@ -74,7 +89,7 @@ In order to analyse and visualize the Iris Dataset in VSCODE we  installed sever
 
 
 
-**Dataset Download and Import:**
+### Dataset Download and Import:
 
 The start of analysis requires us to download this Iris dataset. This was taken from UCI Machine Learning Respository. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import. The dataset can be printed out as a data array set. Why researching the dataset I dounf another way to download the dataset was through Seaborn as this has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
 
@@ -83,7 +98,7 @@ The start of analysis requires us to download this Iris dataset. This was taken 
 
 
 
-## Summary of each variable:
+### Summary of each variable:
 
 The describe() function computes a summary of statistics pertaining to the DataFrame columns.
 
@@ -92,7 +107,7 @@ The three species were also separately defined to get their summary statistics a
 ![](Plots/Summaryoutput.png)
 
 
-## Histogram of each variable type:
+### Histogram of each variable type:
 
 The Histograms show us the range in centimetres(cm) for each of the variables and the frequency these occur in the dataset. The code written showed histograms for each individual variable. The second type of histogram code written was for each variable but species specific. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable.
 
@@ -113,7 +128,7 @@ Using this displot of petal width. Iris setosa is again easily identified. There
 It would be correct to assume we could use this analysis to definitively separate setosa from the other two however you would need further analysis to distinguish between Virginica and Versicolor.
 
 
-## Scatterplots of each Pair of Variables:
+### Scatterplots of each Pair of Variables:
 
 Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. 
 
@@ -141,7 +156,7 @@ The above figure shows the correlation statistics between all the variable. Perf
 
   ![](Plots/regplotpetalsepal.png)
 
-  The regplot above shows the two variables that showed the least correlation. The sepal width and the petal length. 
+  The regplot above shows the two variables that showed the least correlation. The sepal width and the petal length. It is clear to see there is no linear relationship here.
  
 ![](Plots/sns.pairplot.png)
 
@@ -186,20 +201,19 @@ Observations:
 
 
 
-**References:**
 
-What is Python for Data Analysis? 
 
-<https://www.sisense.com/glossary/python-for-data-analysis/>
+# **References:**
 
-Iris Data <https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2>
-<https://skillcrush.com/blog/what-is-python/>
+[1] [Iris Data](https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2)
+
+[2] [Tech 101: What Is Python? Plus, 13 Reasons Why You Should Learn It](https://skillcrush.com/blog/what-is-python/)
+
+[3] [Git Handbook](https://guides.github.com/introduction/git-handbook/#:~:text=GitHub%20is%20a%20Git%20hosting,apps%20in%20the%20GitHub%20Marketplace.)
+
+[4] [34 Open-Source Python Libraries You Should Know About](https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library)
 
 <https://www.markdownguide.org/basic-syntax/>
-
-
-
-
 
 
 

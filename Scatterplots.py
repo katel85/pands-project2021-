@@ -60,6 +60,15 @@ ax[1].legend()
 # Correlation between variables
 print(df.corr(method='pearson'))
 
+plt.figure(figsize=(7,4)) 
+sns.heatmap(df.corr(),annot=True)
+plt.show()
+
+#Above is code for a heatmap from the seaborn library. Heat maps display numeric tabular data 
+# where the cells are colored depending upon the contained value. Heat maps are great 
+# for making trends in # this kind of data more readily apparent, particularly when the data
+# is ordered and there is clustering or in this case correlated.
+
 #https://www.datacamp.com/community/tutorials/introduction-machine-learning-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-299261629574:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=20487&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFMqV46OWTzY86tg_8vc0yBOr_Z2-IGgk8fhj_zxq5z-agq1-nRwRbYaAtOeEALw_wcB
 
 
