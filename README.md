@@ -124,32 +124,31 @@ The second type of histogram code written was for each variable but species spec
 
 ![](Plots/Petal_Length%20Distplot.png)
 
-Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable. between the species for the petal length. 
-Looking at the overall distribution above, petal length and petal width does not have a normal distribution, whereas sepal length and sepal width are uniformly distributed.
+Finally code was written for distplots which I think represented the data in a manner that variables could be distinguished per species 
 
-
-Using the displot above of petal length Iris.Setosa is easily disguishable from the other two species. There is a slight overlap on virginica and versicolor but ditinct distributions nonetheless.
+Using the displot above of petal length Iris.Setosa is easily disguishable from the other two species. There is a slight overlap on virginica and versicolor but ditinct distributions nonetheless.[11]
 
 ![](Plots/Petal_Width%20Distplot.png)
 
 Using this displot of petal width. Iris setosa is again easily identified. There is overlap again with Versicolor and Virginica. 
 
-It would be correct to assume we could use this analysis to definitively separate setosa from the other two however you would need further analysis to distinguish between Virginica and Versicolor.
+It would be correct to assume we could use this graphical analysis to definitively separate setosa from the other two however you would need further analysis to distinguish between Virginica and Versicolor.
 
 
 ### Scatterplots of each Pair of Variables:
 
-Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. 
 
+![](Plots/scatterplotpaired.png)
 
+Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation[12]. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. As can be seen from the scatterplots above The sepal variables do not appear to have much correlation whereas the petal variables show a high degree of correlation.[13]
 
 ![](Plots/Scatterplot%20PairVar%20Species.png)
 
-The second scatter plot generated is seen above. Here the code is species specific and Iris Setosa is easily distinguished from The other two species. The petal width and length scatterplot is better at distinguishing the three species type although there is some over lap between Iris Vericolour and Iris Virginica.
+The second scatter plot generated is seen above. Here the code is species specific and Iris Setosa is easily distinguished from the other two species on both sepal and petal variables. The petal width and length scatterplot is better at distinguishing the three species type although there is some over lap between Iris Vericolour and Iris Virginica. The species specific correlation is much higher also with the petal variables[7].
 
 ![](Plots/Correlationstats.png)
 
-The above figure shows the correlation statistics between all the variable. Perfect positive correction would produce a number of 1. As seen above when the variable is compared against itself. However there are three main variables with high positive correlation.
+The above figure shows the correlation statistics between all the variable. Perfect positive correction would produce a number of 1. As seen above when the variable is compared against itself. However there are three main variables with high positive correlation.[10]
 
 
   [1] Petal Width and Petal Length (0.96)
@@ -161,20 +160,22 @@ The above figure shows the correlation statistics between all the variable. Perf
 
   ![](Plots/regplotpetalpetal.png)
 
-  The regplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:
+  The regplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:[14]
 
   ![](Plots/regplotpetalsepal.png)
 
-  The regplot above shows the two variables that showed the least correlation. The sepal width and the petal length. It is clear to see there is no linear relationship here.
+  The regplot above shows the two variables that showed the least correlation. The sepal width and the petal length. It is clear to see there is no linear relationship here.[15]
  
 ![](Plots/sns.pairplot.png)
 
-The pairplot generated above is incredibly descriptive and pairs all variables together. It is interesting to see how the scatterplot will change when the same variables are used in the scatterplot but placed on different axis. In every paired plot here Iris setosa can be easily identified among the other two species.
+The pairplot generated above is incredibly descriptive and pairs all variables together. There is obvious data clusters per species in this pairplot but there is still overlap in each variable between Iris virginica and Iris Versicolor. In every paired plot here Iris setosa can be easily identified among the other two species[16].
 
 Observations:
 
 - Petal_length and petal_width are the most useful features to identify various flower types.
 - While Setosa can be easily identified (linearly separable), Virginica and Versicolor have some overlap (almost linearly separable).
+
+
 
 
 
@@ -232,10 +233,21 @@ Observations:
 
 [9][How to use Seaborn for Data Visualization](https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1)
 
-[10]
+[10][Exploration of IRIS Dataset](https://rpubs.com/shailesh/iris-exploration)
 
+[11][seaborn.kdeplot](https://seaborn.pydata.org/generated/seaborn.kdeplot.html)
 
-<https://www.markdownguide.org/basic-syntax/>
+[12][A Complete Guide to Scatter Plots](https://chartio.com/learn/charts/what-is-a-scatter-plot/#:~:text=Scatter%20plots'%20primary%20uses%20are,are%20common%20with%20scatter%20plots.)
+
+[13][R Scatter Plot – Base Graph](https://www.learnbyexample.org/r-scatter-plot-base-graph/)
+
+[14][Data Visualization with Python and Seaborn — Part 4: LM Plot & Reg Plot](https://medium.com/@neuralnets/data-visualization-with-python-and-seaborn-part-4-9b0119887130)
+
+[15][Introduction to Machine Learning in Python](https://www.datacamp.com/community/tutorials/introduction-machine-learning-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-299261629574:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=20487&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFMqV46OWTzY86tg_8vc0yBOr_Z2-IGgk8fhj_zxq5z-agq1-nRwRbYaAtOeEALw_wcB)
+
+[16][Seaborn pairplot example-Python Tutorial](https://pythonbasics.org/seaborn-pairplot/)
+
+[17][Basic Syntax-MarkdownGuide](https://www.markdownguide.org/basic-syntax/)
 
 
 

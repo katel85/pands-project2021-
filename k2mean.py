@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.datasets import load_iris
+import matplotlib
 
 # ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 # Ref: https://www.youtube.com/watch?v=asW8tp1qiFQ
@@ -8,6 +9,7 @@ from sklearn.datasets import load_iris
 
 # for this analysis we imported the iris dataset from sklearn as it is preloaded on
 # this library as a dataset array
+
 iris = load_iris()
 iris.data
 iris.target
@@ -43,3 +45,21 @@ print(Accuracy)
 # /Machine%20Learning%20with%20Iris%20Dataset.ipynb
 
 # https://github.com/bhattbhavesh91/k_means_iris_dataset/blob/master/K_means_with_Iris_Data.ipynb
+# ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
+
+
+
+#ref: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
+
+ 
+#Visualization of the dataset without alteration of the latter (display of flowers according to their labels)
+plt . scatter ( x . Petal_Length , x . Petal_width , c = colormap [ y . Targets ], s = 40 )
+plt . title ( 'Actual classification' )
+plt . show ()
+ 
+#Visualization of clusters formed by K-Means
+plt . scatter ( x . Petal_Length , x . Petal_width , c = colormap [ model . labels_ ], s = 40 )
+plt . title ( 'K-means classification' )
+plt . show ()

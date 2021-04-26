@@ -241,8 +241,8 @@ ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
 ax[0].legend()
 ax[1].legend()
 
-#plt.show()
-#plt.close
+plt.show()
+plt.close
 
 # https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
@@ -270,6 +270,9 @@ print(df.corr(method='pearson'))
 plt.figure(figsize=(7,4)) 
 sns.heatmap(df.corr(),annot=True)
 plt.show()
+
+# Co Variance between 
+print (df.cov())
 
 #Above is code for a heatmap from the seaborn library. Heat maps display numeric tabular data 
 # where the cells are colored depending upon the contained value. Heat maps are great 

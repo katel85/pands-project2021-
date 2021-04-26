@@ -13,8 +13,8 @@ names = ['Age', 'VitaminD', 'DDimer', 'HospitalLOS',]
 data = str(df.describe())
 #print(data)
 
-#sns.pairplot (df, hue = 'HospitalLOS')
-
+sns.pairplot (df, hue = 'HospitalLOS')
+plt.show()
 #plt.figure()
 #sns.stripplot(x='VitaminD',y='HospitalLOS',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
 #plt.show()
