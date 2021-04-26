@@ -137,11 +137,11 @@ The above figure shows the correlation statistics between all the variable. Perf
 
   ![](Plots/regplotpetalpetal.png)
 
-  The lmplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:
+  The regplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:
 
   ![](Plots/regplotpetalsepal.png)
 
-  The lmplot above shows the two variables that showed the least correlation. The sepal width and the petal length. 
+  The regplot above shows the two variables that showed the least correlation. The sepal width and the petal length. 
  
 ![](Plots/sns.pairplot.png)
 
@@ -151,6 +151,8 @@ Observations:
 
 - Petal_length and petal_width are the most useful features to identify various flower types.
 - While Setosa can be easily identified (linearly separable), Virginica and Versicolor have some overlap (almost linearly separable).
+
+
 
 
 
