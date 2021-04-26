@@ -114,16 +114,19 @@ The describe() function computes a summary of statistics pertaining to the dataf
 ![](Hist%20Sepal%20Width.png)
 
 
-The Histogram plots show us the  frequency distribution for each of the variables. The code written showed histograms for each individual variable (sepal length, sepal width, petal length and petal width). The individual histogram plots per variable revealed that sepal length and width had a fairly normal distribution over they range of vales that were measured. The petal width and length did not follow a normal distribution pattern and were quite skewed with a Plateau or Multimodal Distribution. This distribution would make sense because this model is of the collective range of three different species.
+The Histogram plots show us the  frequency distribution for each of the variables. The code written showed histograms for each individual variable (sepal length, sepal width, petal length and petal width). The individual histogram plots per variable revealed that sepal length and width had a fairly normal distribution over they range of vales that were measured. The petal width and length did not follow a normal distribution pattern and were quite skewed with a Plateau or Multimodal Distribution. This distribution would make sense because this model is of the collective range of three different species.[6]
  
 
 
 ![](Plots/Variable_Histograms.png)
 
-The second type of histogram code written was for each variable but species specific. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable. between the species for the petal length. 
-Looking at the overall distribution above, petal length and petal width does not have a normal distribution, whereas sepal length and sepal width are uniformly distributed.
+The second type of histogram code written was for each variable but species specific. The histograms for petal length here per species are again Multimodal distributions. The most significant histogram here is Iris Setosa for petal length. The histogram is heavily skewed to the right making it quite distinct from the other histograms.
 
 ![](Plots/Petal_Length%20Distplot.png)
+
+Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable. between the species for the petal length. 
+Looking at the overall distribution above, petal length and petal width does not have a normal distribution, whereas sepal length and sepal width are uniformly distributed.
+
 
 Using the displot above of petal length Iris.Setosa is easily disguishable from the other two species. There is a slight overlap on virginica and versicolor but ditinct distributions nonetheless.
 
@@ -220,6 +223,17 @@ Observations:
 [4] [34 Open-Source Python Libraries You Should Know About](https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library)
 
 [5] [Iris Data Set - UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris/)
+
+[6] [Box plot and Histogram exploration on Iris data](https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/)
+
+[7][Python IRIS Data visualization and explanation](https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation)
+
+[8][Visualizing distributions of data](https://seaborn.pydata.org/tutorial/distributions.html)
+
+[9][How to use Seaborn for Data Visualization](https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1)
+
+[10]
+
 
 <https://www.markdownguide.org/basic-syntax/>
 

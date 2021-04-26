@@ -1,9 +1,3 @@
-# Part of the project is to create histograms for each of the variables in the Iris Dataset 
-# Below we will work with code to display the histograms of each of the varibles.
-# The variables in the dataset are sepal width, sepal length, petal width and petal length.
-# Species is also a variable but we're not going to save a histogram of this.
-
-
 
 #First we need to read in the dataset to get the information in order to plot the histograms
 #We will need pandas to do this.
@@ -25,9 +19,42 @@ virginica=df[df['species']=='virginica']
 
 #print (df.info())
 
+#TypeError: write() argument must be str, not DataFrame. Error recieved before I put str in fromt of df.describe
+data = str(df.describe())
+set = str(setosa.describe())
+ver = str (versicolor.describe())
+gin = str(virginica.describe())
+
+print(data)
+# check to see if all the species+variables are printed correctly.
+#print ("IRIS DATA SET SUMMARY")
+#print (data)
+#print ("SETOSA DETAILS")
+#print(set)
+#print ("VERSICOLOR DETAILS")
+#print(ver)
+#print ("VIRGINICA DETAILS")
+#print(gin)
+
+# I want to create a txt file for the summary and write into the file the describe function for both the data and the individual species
+file = open("SummaryData.txt","w")
+file.write(" IRIS DATA SET SUMMARY \n")
+file.write(data)
+file.write("\n SETOSA DETAILS \n")
+file.write(set)
+file.write("\n VERSICOLOR DETAILS \n")
+file.write(ver)
+file.write("\n VIRGINICA DETAILS \n")
+file.write(gin)
+file.close()
+
+
+# https://rpubs.com/shailesh/iris-exploration-correlation
+
 #names of variables
-#names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
 #code adapted from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
+# first type of histogram code is for just the variable and is not species specific.
 plt.figure(figsize = (5, 5))
 x = df["sepal_length"]
   
@@ -70,16 +97,7 @@ plt.savefig("Hist Petal Width.png")
 plt.show()
 
 
-#plt.figure(figsize = (5, 5))
-#x = df["species"]
-
-#plt.hist(x, bins = 5, color = "c")
-#plt.title("species")
-#plt.xlabel("species")
-#plt.ylabel("Count")
-#plt.show()
-
-# the above code shows the variabes as a whole so I want to see histograms that will diffrenciate the count according to species.
+# the above code shows the variabes as a whole so I want to see histograms that will differenciate the count according to species.
 # code adapted from https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 plt.figure()
 
@@ -134,12 +152,15 @@ ax[3][2].legend()
 
 plt.show()
 plt.close()
+
 #https://seaborn.pydata.org/tutorial/distributions.html
 # https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1
+#https://seaborn.pydata.org/generated/seaborn.kdeplot.html
+#https://web.microsoftstream.com/video/f8fbdd37-3586-4f0d-82c4-7bda05470ff4
 
 # Although the species specific histograms are more useful to visualize the data it would be better to superimpose these
 # counts per species on one histogram plt per variable as below with the displot and the kde .I changed different 
-# components like the colour and bin number but found the kde component the best to distinguish the species.
+# components like the colour and bin number and I kept the kde=True for the graph.
 # FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function 
 # with similar flexibility) or `histplot` (an axes-level function for histograms). I did update the code to change the displot with
 # histplot and displot. But the putput was not as aesthetically pleasing I kept the code as distplot.
@@ -203,11 +224,104 @@ plt.ylabel("Distribution of Petal Width")
 plt.show()
 plt.close()
 
-
-#https://seaborn.pydata.org/tutorial/distributions.html
-# https://towardsdatascience.com/how-to-use-seaborn-for-data-visualization-4c61fc488ec1
 #https://seaborn.pydata.org/generated/seaborn.kdeplot.html
 #https://web.microsoftstream.com/video/f8fbdd37-3586-4f0d-82c4-7bda05470ff4
-#code adapted from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 
+# Next code was written for scatterplots of the dataset
+
+#  This scatterplot is not species specific so does not render much information other than the distribution
+# overall of the paired variables.
+
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(5, 5))
+df.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+df.plot(x="petal_length",y="petal_width",kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal comparasion ', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+
+#plt.show()
+#plt.close
+
+# https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(10, 5))
+
+setosa.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],label='setosa',color='r')
+versicolor.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],label='versicolor',color='b')
+virginica.plot(x="sepal_length", y="sepal_width", kind="scatter", ax=ax[0], label='virginica', color='g')
+
+setosa.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],label='setosa',color='r')
+versicolor.plot(x="petal_length",y="petal_width",kind="scatter",ax=ax[1],label='versicolor',color='b')
+virginica.plot(x="petal_length", y="petal_width", kind="scatter", ax=ax[1], label='virginica', color='g')
+
+ax[0].set(title='Sepal comparasion ', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+#plt.show()
+
+# Correlation between variables
+print(df.corr(method='pearson'))
+# https://rpubs.com/shailesh/iris-exploration-correlation
+
+plt.figure(figsize=(7,4)) 
+sns.heatmap(df.corr(),annot=True)
+plt.show()
+
+#Above is code for a heatmap from the seaborn library. Heat maps display numeric tabular data 
+# where the cells are colored depending upon the contained value. Heat maps are great 
+# for making trends in # this kind of data more readily apparent, particularly when the data
+# is ordered and there is clustering or in this case correlation.
+
+#https://www.datacamp.com/community/tutorials/introduction-machine-learning-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-299261629574:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=20487&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFMqV46OWTzY86tg_8vc0yBOr_Z2-IGgk8fhj_zxq5z-agq1-nRwRbYaAtOeEALw_wcB
+
+
+#sns.scatterplot(x='sepal_length', y='sepal_width', data=df, hue='species')
+#plt.title("Sepal Length vs Sepal Width") 
+#plt.xlabel("Sepal Length") 
+#plt.ylabel("Sepal Width")
+
+
+
+#Multivariate Analysis:
+#sns.pairplot (df, hue = 'species')
+
+#plt.show()
+
+#sns.set(style='whitegrid')
+#sns.swarmplot(x="species", y="petal_length", data=df)
+#plt.show()
+
+
+#fig=plt.gcf()
+#fig.set_size_inches(10,7)
+#fig=sns.stripplot(x='species',y='sepal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
+#plt.show()
+
+#plt.figure()
+#sns.stripplot(x='species',y='petal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
+#plt.show()
+
+# https://medium.com/@neuralnets/data-visualization-with-python-and-seaborn-part-1-29c9478a8700
+
+
+#sns.stripplot(x='Species',y='SepalLengthCm',data=iris,jitter=True,edgecolor='gray')
+#plt.figure(figsize = (10, 10))
+#sns.lmplot(x="petal_length", y="sepal_length",data=df)
+#sns.lmplot(x="petal_length", y="sepal_width", data=df)
+#plt.show()
+# Although the code above shows the linear regression and the scatter. I didn't like particularly the format
+# of the plot when it was generated so I tried again with code for the regplot. 
+# code adapted from https://seaborn.pydata.org/tutorial/regression.html
+plt.figure()
+sns.regplot(x=df["petal_length"], y=df["petal_width"], line_kws={"color":"r","alpha":0.7,"lw":5})
+plt.show()
+
+plt.figure()
+sns.regplot(x=df["petal_length"], y=df["sepal_width"], line_kws={"color":"r","alpha":0.7,"lw":5})
+plt.show()
+# code adapted from https://www.python-graph-gallery.com/42-custom-linear-regression-fit-seaborn
 
