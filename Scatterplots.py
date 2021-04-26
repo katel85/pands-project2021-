@@ -93,9 +93,20 @@ print(df.corr(method='pearson'))
 
 
 #sns.stripplot(x='Species',y='SepalLengthCm',data=iris,jitter=True,edgecolor='gray')
-plt.figure(figsize = (4, 4))
-sns.lmplot(x="petal_length", y="sepal_length",data=df)
-sns.lmplot(x="petal_length", y="sepal_width", data=df)
+#plt.figure(figsize = (10, 10))
+#sns.lmplot(x="petal_length", y="sepal_length",data=df)
+#sns.lmplot(x="petal_length", y="sepal_width", data=df)
+#plt.show()
+# Although the code above shows the linear regression and the scatter. I didn't like particularly the format
+# of the plot when it was generated so I tried again with code for the regplot. 
+# code adapted from https://seaborn.pydata.org/tutorial/regression.html
+plt.figure()
+sns.regplot(x=df["petal_length"], y=df["petal_width"], line_kws={"color":"r","alpha":0.7,"lw":5})
 plt.show()
 
-# code adapted from https://seaborn.pydata.org/tutorial/regression.html
+plt.figure()
+sns.regplot(x=df["petal_length"], y=df["sepal_width"], line_kws={"color":"r","alpha":0.7,"lw":5})
+plt.show()
+# code adapted from https://www.python-graph-gallery.com/42-custom-linear-regression-fit-seaborn
+
+

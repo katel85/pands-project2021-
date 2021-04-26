@@ -135,16 +135,14 @@ The above figure shows the correlation statistics between all the variable. Perf
   [3] Petal Width and Sepal Length (0.81)
 
 
-  ![](Plots/ImplotPETALPETAL.png)
+  ![](Plots/regplotpetalpetal.png)
 
   The lmplot in the seaborn module above shows the high degree of correlation between the petal length and width. This plot is used to visualize a linear relationship as determined through regression.The figure will draw a scatterplot of two variables, x and y, and then fit the regression model y ~ x and plot the resulting regression line and a 95% confidence interval for that regression:
 
-  ![](Plots/lmplotPetalSepal.png)
+  ![](Plots/regplotpetalsepal.png)
 
   The lmplot above shows the two variables that showed the least correlation. The sepal width and the petal length. 
  
-
-
 ![](Plots/sns.pairplot.png)
 
 The pairplot generated above is incredibly descriptive and pairs all variables together. It is interesting to see how the scatterplot will change when the same variables are used in the scatterplot but placed on different axis. In every paired plot here Iris setosa can be easily identified among the other two species.
