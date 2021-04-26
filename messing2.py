@@ -21,5 +21,5 @@ data = str(df.describe())
 
 print(df.corr(method='pearson'))
 
-
+#ref: https://stackoverflow.com/questions/38105539/how-to-convert-a-scikit-learn-dataset-to-a-pandas-dataset
 
