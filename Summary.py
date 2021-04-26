@@ -18,11 +18,14 @@ setosa=df[df['species']=='setosa']
 versicolor=df[df['species']=='versicolor']
 virginica=df[df['species']=='virginica']
 
+
+#TypeError: write() argument must be str, not DataFrame. Error recieved before I put str in fromt of df.describe
 data = str(df.describe())
 set = str(setosa.describe())
 ver = str (versicolor.describe())
 gin = str(virginica.describe())
 
+print(data)
 # check to see if all the species+variables are printed correctly.
 #print ("IRIS DATA SET SUMMARY")
 #print (data)

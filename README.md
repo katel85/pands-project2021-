@@ -40,7 +40,7 @@ The Fisher Iris Data Set is multivariate dataset . The data set  is the measurem
 
 - The task it poses of discriminating between three species of Iris from measurements of their petals and sepals is simple but challenging.
 
-- The data are real data, but apparently of good quality. In principle and in practice, test datasets could be synthetic and that might be necessary or useful to make a point. Nevertheless, few people object to real data.
+- The data is real data, but apparently of good quality. In principle and in practice, test datasets could be synthetic and that might be necessary or useful to make a point. Nevertheless, few people object to real data.
 
 
 
@@ -79,7 +79,7 @@ GITHUB-GitHub is a cloud-based hosting service that lets you manage Git reposito
 
 In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python.[4]
 
-**Matplotlib**-is a comprehensive library for creating static, animated, and interactive visualizations in Python"
+**Matplotlib**-is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 **Numpy**-is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays. It is the fundamental package for scientific computing with Python.
 
@@ -91,7 +91,7 @@ In order to analyse and visualize the Iris Dataset in VSCODE we  installed sever
 
 ### Dataset Download and Import:
 
-The start of analysis requires us to download this Iris dataset. This was taken from UCI Machine Learning Respository. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import. The dataset can be printed out as a data array set. Why researching the dataset I dounf another way to download the dataset was through Seaborn as this has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
+The start of analysis requires us to download the Iris dataset. This was taken from UCI Machine Learning Respository[5]. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import from. The dataset can be printed out as a data array set. Why researching the dataset I found that another way to download the dataset was through Seaborn as this has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
 
 
 ![](Plots/IrisDatasetImport.png)
@@ -100,21 +100,27 @@ The start of analysis requires us to download this Iris dataset. This was taken 
 
 ### Summary of each variable:
 
-The describe() function computes a summary of statistics pertaining to the DataFrame columns.
+The describe() function computes a summary of statistics pertaining to the dataframE coloums. The describe function was used on the entire dataset and separately computed for the three different species. Count, mean, std, min, 25%, 50%, 75% and max values are outputted for the 4 variables. From the summary below you can see the mean values for the 4 variables are quite similar but there is a marked difference in the mean for the petal length and width for Iris Setosa when compared with the other two species. Also while the standard  deviation is quite low for all species in petal length (the highest is Iris Virginica at 0.55) The collective group S.D is at 1.76 for petal length. 3 times higher than Iris Virginica. While the variation in the petal length is still optimum ( <1 C.V). This higher SD for the group stats indicates there is variation between the species for the petal length. 
 
-The three species were also separately defined to get their summary statistics also.
+
 
 ![](Plots/Summaryoutput.png)
 
 
 ### Histogram of each variable type:
 
-The Histograms show us the range in centimetres(cm) for each of the variables and the frequency these occur in the dataset. The code written showed histograms for each individual variable. The second type of histogram code written was for each variable but species specific. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable.
+
+![](Hist%20Petal%20Width.png)
+![](Hist%20Sepal%20Width.png)
+
+
+The Histogram plots show us the  frequency distribution for each of the variables. The code written showed histograms for each individual variable (sepal length, sepal width, petal length and petal width). The individual histogram plots per variable revealed that sepal length and width had a fairly normal distribution over they range of vales that were measured. The petal width and length did not follow a normal distribution pattern and were quite skewed with a Plateau or Multimodal Distribution. This distribution would make sense because this model is of the collective range of three different species.
+ 
 
 
 ![](Plots/Variable_Histograms.png)
 
-
+The second type of histogram code written was for each variable but species specific. Finally code was written for distplots which I think represented the data in a manner that variables could be differenciated per species if the data points were distinguishable. between the species for the petal length. 
 Looking at the overall distribution above, petal length and petal width does not have a normal distribution, whereas sepal length and sepal width are uniformly distributed.
 
 ![](Plots/Petal_Length%20Distplot.png)
@@ -212,6 +218,8 @@ Observations:
 [3] [Git Handbook](https://guides.github.com/introduction/git-handbook/#:~:text=GitHub%20is%20a%20Git%20hosting,apps%20in%20the%20GitHub%20Marketplace.)
 
 [4] [34 Open-Source Python Libraries You Should Know About](https://www.mygreatlearning.com/blog/open-source-python-libraries/#Library)
+
+[5] [Iris Data Set - UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris/)
 
 <https://www.markdownguide.org/basic-syntax/>
 
