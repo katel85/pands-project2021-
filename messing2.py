@@ -8,13 +8,14 @@ df = pd.read_csv(filename)      # this will read the data in as csv format from 
 
 #print(df)
 
-names = ['Age', 'VitaminD', 'DDimer', 'HospitalLOS',]
+names = ['Age', 'VitaminD', 'DDimer', 'HospitalLOS','Condition']
 
 data = str(df.describe())
 #print(data)
 
-sns.pairplot (df, hue = 'HospitalLOS')
+sns.pairplot (df, hue = 'Condition')
 plt.show()
+
 #plt.figure()
 #sns.stripplot(x='VitaminD',y='HospitalLOS',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
 #plt.show()
@@ -22,4 +23,6 @@ plt.show()
 print(df.corr(method='pearson'))
 
 #ref: https://stackoverflow.com/questions/38105539/how-to-convert-a-scikit-learn-dataset-to-a-pandas-dataset
+
+
 
