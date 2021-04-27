@@ -1,7 +1,10 @@
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.datasets import load_iris
-import matplotlib
+import matplotlib as plt
+import pylab as plt
+import numpy as np
+import sklearn.metrics as sm
 
 # ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 # Ref: https://www.youtube.com/watch?v=asW8tp1qiFQ
@@ -13,6 +16,12 @@ import matplotlib
 iris = load_iris()
 iris.data
 iris.target
+
+x = pd.DataFrame(iris.data, columns=['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width'])
+y = pd.DataFrame(iris.target, columns=['Target'])
+
+#print(x)
+print(y)
 
 #print(iris)- this shows me the dataset in array format
 #print (iris.data)-this will show me just the data set in the array
@@ -47,19 +56,46 @@ print(Accuracy)
 # https://github.com/bhattbhavesh91/k_means_iris_dataset/blob/master/K_means_with_Iris_Data.ipynb
 # ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 
+#ref: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+# http://stamfordresearch.com/k-means-clustering-in-python/
 
+#Start with a plot figure of size 12 units wide & 3 units tall
+plt.figure(figsize=(12,3))
 
+# Create an array of three colours, one for each species.
+colors = np.array(['red', 'green', 'blue'])
+
+# make sure the array is in the correct order {2,0,1} so it will appear is the correct order in the plt
+predictedY = np.choose(KMmodel.labels_, [2, 0, 1]).astype(np.int64)
+
+# Plot the classifications that we saw earlier between Petal Length and Petal Width
+plt.subplot(1, 2, 1)
+plt.scatter(x['Petal Length'], x['Petal Width'], c=colors[iris.target], s=40)
+plt.title('Before classification')
+ 
+# Plot the classifications according to the model
+plt.subplot(1, 2, 2)
+plt.scatter(x['Petal Length'], x['Petal Width'], c=colors[predictedY], s=40)
+plt.title("Model's classification")
+plt.show()
+
+sm.accuracy_score(iris.target, predictedY)
+
+print(sm.accuracy_score(iris.target, predictedY))
+
+#sm.confusion_matrix(predictedY,iris.target)
+
+#print(sm.confusion_matrix(predictedY,iris.target))
+#We can see that all the red dots are grouped/clustered 100% accurately and the green and black dots are fairly 
+# well grouped too.
+
+#Ref: https://github.com/venky14/# Machine-Learning-with-Iris-Dataset/blob/master
+# /Machine%20Learning%20with%20Iris%20Dataset.ipynb
+
+# https://github.com/bhattbhavesh91/k_means_iris_dataset/blob/master/K_means_with_Iris_Data.ipynb
+# ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 
 #ref: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+# http://stamfordresearch.com/k-means-clustering-in-python/
 
 
- 
-#Visualization of the dataset without alteration of the latter (display of flowers according to their labels)
-plt . scatter ( x . Petal_Length , x . Petal_width , c = colormap [ y . Targets ], s = 40 )
-plt . title ( 'Actual classification' )
-plt . show ()
- 
-#Visualization of clusters formed by K-Means
-plt . scatter ( x . Petal_Length , x . Petal_width , c = colormap [ model . labels_ ], s = 40 )
-plt . title ( 'K-means classification' )
-plt . show ()
