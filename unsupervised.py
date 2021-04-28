@@ -13,7 +13,7 @@ sns.set() # set the default seaborn theme, scaling, and color palette.
 # code adpted from https://shunsvineyard.info/2017/10/22/machine-learning-basics-and-perceptron-learning-algorithm/
 filename = 'IrisDataSet.txt' 
 df = pd.read_csv(filename) 
-unlabeled_data = df.iloc[:, [0, 1,2,3]].values #iloc() function accepts only integer type values as the index 
+unlabeled_data = df.iloc[:, [0,1,2,3]].values #iloc() function accepts only integer type values as the index 
 #print (df)
 #print(unlabeled_data)
 #names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
@@ -89,16 +89,15 @@ print(Accuracy)
 # Now I want to put this code into a scatter plot to show the actaul classification and predicted classification
 # code adapted from https://constantgeeks.com/2017/01/11/playing-with-iris-data-kmeans-clustering-in-python/
 x = pd.DataFrame(iris.data, columns=['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width'])
-y = pd.DataFrame(iris.target, columns=['Target'])
+#y = pd.DataFrame(iris.target, columns=['Target'])
 
 #print(x)
 #print(y)
 
-#Start with a plot figure of size 12 units wide & 3 units tall
 plt.figure(figsize=(12,3))
 
 # Create an array of three colours, one for each species.
-colors = np.array(['red', 'green', 'blue'])
+colors = np.array(['blue', 'indigo', 'crimson'])
 
 # make sure the array is in the correct order {2,0,1} so it will appear is the correct order in the plt
 predictedY=KMmodel.labels_
@@ -107,12 +106,12 @@ predictedY=KMmodel.labels_
 # Plot the classifications that we saw earlier between Petal Length and Petal Width
 plt.subplot(1, 2, 1)
 plt.scatter(x['Petal Length'], x['Petal Width'], c=colors[iris.target], s=50)
-plt.title('Before K-Mean classification')
+plt.title('Before K-Mean Model Classification')
  
 # Plot the classifications according to the model
 plt.subplot(1, 2, 2)
 plt.scatter(x['Petal Length'], x['Petal Width'], c=colors[predictedY], s=50)
-plt.title(" After K-Mean Model classification")
+plt.title(" After K-Mean Model Classification")
 plt.show()
 
 sm.accuracy_score(iris.target, predictedY)
@@ -125,16 +124,15 @@ print(sm.confusion_matrix(iris.target, predictedY))
 #We can see that all the red dots are grouped/clustered 100% accurately and the green and black dots are fairly 
 # well grouped too.
 
-#Ref: https://github.com/venky14/# Machine-Learning-with-Iris-Dataset/blob/master
-# /Machine%20Learning%20with%20Iris%20Dataset.ipynb
+# https://github.com/venky14/# Machine-Learning-with-Iris-Dataset/blob/master/Machine%20Learning%20with%20Iris%20Dataset.ipynb
 # https://github.com/bhattbhavesh91/k_means_iris_dataset/blob/master/K_means_with_Iris_Data.ipynb
-# ref https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
-#ref: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+# https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+# https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 # http://stamfordresearch.com/k-means-clustering-in-python/
-#https://www.datasciencemadesimple.com/harmonic-mean-function-python-pandas-dataframe-row-column-wise/
-# Ref: https://www.youtube.com/watch?v=asW8tp1qiFQ
-# Ref: https://web.microsoftstream.com/video/0685eed2-2dd6-490b-b6fc-cda8391f1db7
-# ref: https://github.com/shunsvineyard/shunsvineyard/blob/main/machine-learning-basics-and-perceptron-learning-algorithm/unsupervised.py
+# https://www.datasciencemadesimple.com/harmonic-mean-function-python-pandas-dataframe-row-column-wise/
+# https://www.youtube.com/watch?v=asW8tp1qiFQ
+# https://web.microsoftstream.com/video/0685eed2-2dd6-490b-b6fc-cda8391f1db7
+# https://github.com/shunsvineyard/shunsvineyard/blob/main/machine-learning-basics-and-perceptron-learning-algorithm/unsupervised.py
 # http://seaborn.pydata.org/index.html
 # https://realpython.com/k-means-clustering-python/#conclusion
 # http://pandas.pydata.org/

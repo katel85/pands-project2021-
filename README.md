@@ -194,13 +194,57 @@ To look at some unsupervised learning in python using the Iris Dataset code was 
 
 The unsupervised scatterplots above show us that there seems to be no relationship/null relationship between the sepal length and width but there does seem to be two broad clusters. The unsupervised scatterplot for the petal length and width shows a strong positive linear realtionship with two obvious clusters[12].
 
-The k-means clustering method is an unsupervised machine learning technique used to identify clusters of data objects in a dataset[20].It is a clustering algorithm that is a simple Unsupervised algorithm used to predict groups from an unlabeled dataset. In Unsupervised machine learning, you don’t need to supervise the model. Here the model does its own work to find the patterns in the dataset. And then it automatically labels the unlabeled data[21].
+The k-means clustering method is an unsupervised machine learning technique used to identify clusters of data objects in a dataset[20].It is a clustering algorithm that is a simple unsupervised algorithm used to predict groups from an unlabeled dataset. In unsupervised machine learning, you don’t need to supervise the model. Here the model does its own work to find the patterns in the dataset. And then it automatically labels the unlabeled data[21].
 
-Code was written that imported the Iris dataset from Skitit Learn. The data was in an array set with no lables. When you download the data from Skitit Learn it will also divide the dataset into targets named [0,1,2] according to the species.
-The K-means algorithm is used to identify clusters but since we already know the amount of clusters (or we assume we know)
-we will input cluster number to the algorithm as 3. We used the predifined K-means algorithm module that is available in Skitit Learn library.  Using the K-Means algorithm we fit a model of the unlabelled iris dataset. The K-means algorithm will then print out a set of target arrays that are predicted based on the dataset it analysed. 
+Code was written that imported the Iris dataset from Skitit Learn Library. The sepal and petal lengths and widths are in an array called iris.data. The species classifications for each of the 150 samples is in another array called iris.target. Iris.target is an array of integers used to represent the Iris species. 0=Setosa, 1=Versicolor, 2=Virginica. Below is the target array for the Iris Dataset.
+
+![](Plots/irisdatasettarget.png)
+
+
+The K-means algorithm is used to identify clusters.The KMeans algorithm clusters data by trying to separate samples in n groups of equal variance. We already know the amount of clusters for the iris dataset so we can input cluster number to the algorithm as 3. If you did not know the cluster number of the unlabelled data you could use code for the elbow method which predicts the amount of clusters in a set of data[23]. We used the predifined K-means algorithm module that is available in Skitit Learn library.  Using the K-Means algorithm we fit a model of the unlabelled iris dataset. The K-means algorithm will then print out a set of target arrays that are predicted based on the dataset it analysed[24]. 
 
 ![](Plots/kmeanscode.png)
+
+The KMeans model object also assigns integer ids for the three clusters (n_clusters =3 above), namely 0, 1, 2. Its important to note that the KMeans model has no knowledge of the iris.target data, and the clusters being given ids 0,1,2 is just a coincidence. The below array was printed from the KMmodel.label_. 
+
+![](Plots/kmeans.targets.png)
+
+This k-means model array looks very similar to the iris.target array. However there is some obvious misclassifications between the 2 and 0 targets.
+
+We then used code to visulaise this data in a scatterplot before and after the k-means classification.
+
+![](Plots/kmeanclassificationcodeplt.png)
+
+![](Plots/kmeanclassificationplot.png)
+
+As can be seen from the plots above. The k-means clustering algorithm was quite accurate in predicting the clusters in the Iris Dataset. 
+
+The pandas crosstab and the sklearn metrics were both used to evaluate the quality of the output of a classifier on the iris data set.
+
+![](Plots/confusion%20matrix%20output.png)
+
+The confusion matrix tells us that:
+
+[1]  50 samples of taget 0 were identified correctly.
+
+[2]  48 samples of target 1 were identified correctly and 2 were identified as target 2.
+
+[3] 36 samples of target 2 were identified correctly and 14 were misclassified as target 1.
+
+Also included in the code for the scatterplots was the accuracy score which was found to be 0.89%.
+When we manually coded for accuracy above in the kmeans code we found to be the same 0.89%. The k-means algorithm predicted to a high degree of accuracy the correct species type based on the cluster analysis.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -293,6 +337,12 @@ we will input cluster number to the algorithm as 3. We used the predifined K-mea
 [21][K Means Clustering in Python : Label the Unlabeled Data](https://www.datasciencelearner.com/k-means-clustering-in-python-label-dataset/)
 
 [22][Scikit Learn - KMeans Clustering Analysis with the Iris Data Set](https://www.youtube.com/watch?v=asW8tp1qiFQ)
+
+[23][K-Means Elbow Method Code For Python](https://predictivehacks.com/k-means-elbow-method-code-for-python/)
+
+[24][Playing with IRIS data – KMeans clustering in python](https://constantgeeks.com/2017/01/11/playing-with-iris-data-kmeans-clustering-in-python/)
+
+
 
 
 
