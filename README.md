@@ -1,21 +1,23 @@
 # Pands-project2021-G00048625
 
 - [Pands-project2021-G00048625](#pands-project2021-g00048625)
-  - [**Project Brief:**](#project-brief)
+  - [Project Brief:](#project-brief)
   - [Summary of Fisher's Iris Data Set.](#summary-of-fishers-iris-data-set)
-  - [**What is Python and what is it used for:**](#what-is-python-and-what-is-it-used-for)
-  - [**Analysing Fisher's Iris Dataset Using Python:**](#analysing-fishers-iris-dataset-using-python)
-    - [**Applications used:**](#applications-used)
-- [Iris Dataset Code and Analysis:](#iris-dataset-code-and-analysis)
-  - [Libraries Used:](#libraries-used)
+  - [What is Python and what is it used for:](#what-is-python-and-what-is-it-used-for)
+  - [Analysing Fisher's Iris Dataset Using Python:](#analysing-fishers-iris-dataset-using-python)
+    - [Applications used:](#applications-used)
+  - [Iris Dataset Code and Analysis:](#iris-dataset-code-and-analysis)
+    - [Libraries Used:](#libraries-used)
     - [Dataset Download and Import:](#dataset-download-and-import)
     - [Summary of each variable:](#summary-of-each-variable)
     - [Histogram of each variable type:](#histogram-of-each-variable-type)
     - [Scatterplots of each Pair of Variables:](#scatterplots-of-each-pair-of-variables)
+  - [Further Analysis:](#further-analysis)
+    - [Unsupervised Learning:](#unsupervised-learning)
 - [**References:**](#references)
 
 
-## **Project Brief:**
+## Project Brief:
 
 **Problem statement:**
 
@@ -48,7 +50,7 @@ The Fisher Iris Data Set is multivariate dataset . The data set  is the measurem
 
 As previously mentioned Fisher used this dataset as an example of linear discriminant analysis (LCA). LCA is a method used in statistics and other fields, to find a linear combination of features that characterizes or separates two or more classes of objects or events. Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. It is, of course, entirely appropriate and in the spirit of scientific inquiry to make and publish comparisons of models and their performance on common data sets and the pattern recognition community has used Iris in perhaps a thousand papers for just this reason.
  
-## **What is Python and what is it used for:**
+## What is Python and what is it used for:
 
 Python is a popular multi-purpose **programming language** widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions.[2]
 
@@ -63,9 +65,9 @@ The application we used Python for in this course was scripting and data science
 - Automation is another area where it pays to learn Python. Python’s ability to write system scripts means you can create simple Python programs to automate mindless tasks that eat away at your productivity. The time you’ll save by knowing how to automate processes with Python is a huge selling point for learning the language.
 
 
-## **Analysing Fisher's Iris Dataset Using Python:**
+## Analysing Fisher's Iris Dataset Using Python:
 
-### **Applications used:**
+### Applications used:
 
 CMDER- CMDER is a free software package, portable console emulator specifically for Windows. CMDER is a great utility for developers and coders. It is used primarily for running scripts but has many more functions. I cloned my respiratory for the project from github through cmder and saved it onto my machine.
 
@@ -73,9 +75,9 @@ VSCODE- Visual Studio Code is a freeware source-code editor made by Microsoft fo
 
 GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine.[3] 
 
-# Iris Dataset Code and Analysis:
+## Iris Dataset Code and Analysis:
 
-## Libraries Used:
+### Libraries Used:
 
 In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python.[4]
 
@@ -175,6 +177,39 @@ Observations:
 - Petal_length and petal_width are the most useful features to identify various flower types.
 - While Setosa can be easily identified (linearly separable), Virginica and Versicolor have some overlap (almost linearly separable).
 
+## Further Analysis:
+
+### Unsupervised Learning:
+
+While researching the Iris Dataset there was copious amount of information about supervised versus unsupervised learning. Supervised learning, also known as supervised machine learning, is a subcategory of machine learning and artificial intelligence. It is defined by its use of labeled datasets to train algorithms that classify data or predict outcomes accurately. Unsupervised learning is where you only have input data (X) and no corresponding output variables.The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data.
+These are called unsupervised learning because unlike supervised learning above there is no correct answers and there is no teacher. Algorithms are left to their own devises to discover and present the interesting structure in the data[18].
+
+To look at some unsupervised learning in python using the Iris Dataset code was written that removed labels from the data. Species is not known. The sepal length and width was used to view on a scatterplot as was petal length and width[19].
+
+![Code for Unsupervised Scatterplots of Variables](Plots/unsupervised%20code.png)
+
+
+![](Plots/unsupervised%20plots.png)
+
+
+The unsupervised scatterplots above show us that there seems to be no relationship/null relationship between the sepal length and width but there does seem to be two broad clusters. The unsupervised scatterplot for the petal length and width shows a strong positive linear realtionship with two obvious clusters[12].
+
+The k-means clustering method is an unsupervised machine learning technique used to identify clusters of data objects in a dataset[20].It is a clustering algorithm that is a simple Unsupervised algorithm used to predict groups from an unlabeled dataset. In Unsupervised machine learning, you don’t need to supervise the model. Here the model does its own work to find the patterns in the dataset. And then it automatically labels the unlabeled data[21].
+
+Code was written that imported the Iris dataset from Skitit Learn. The data was in an array set with no lables. When you download the data from Skitit Learn it will also divide the dataset into targets named [0,1,2] according to the species.
+The K-means algorithm is used to identify clusters but since we already know the amount of clusters (or we assume we know)
+we will input cluster number to the algorithm as 3. We used the predifined K-means algorithm module that is available in Skitit Learn library.  Using the K-Means algorithm we fit a model of the unlabelled iris dataset. The K-means algorithm will then print out a set of target arrays that are predicted based on the dataset it analysed. 
+
+![](Plots/kmeanscode.png)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,7 +284,15 @@ Observations:
 
 [17][Basic Syntax-MarkdownGuide](https://www.markdownguide.org/basic-syntax/)
 
+[18][Supervised and Unsupervised Machine Learning Algorithms](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/)
 
+[19][Machine Learning Basics and Perceptron Learning Algorithm](https://shunsvineyard.info/2017/10/22/machine-learning-basics-and-perceptron-learning-algorithm/)
+
+[20][K-Means Clustering in Python: A Practical Guide](https://realpython.com/k-means-clustering-python/#conclusion)
+
+[21][K Means Clustering in Python : Label the Unlabeled Data](https://www.datasciencelearner.com/k-means-clustering-in-python-label-dataset/)
+
+[22][Scikit Learn - KMeans Clustering Analysis with the Iris Data Set](https://www.youtube.com/watch?v=asW8tp1qiFQ)
 
 
 
