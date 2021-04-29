@@ -50,7 +50,7 @@ plt.show()
 
 # for this analysis we imported the iris dataset from sklearn as it is preloaded on
 # this library as a dataset array
-
+#pylint: disable=no-member
 iris = load_iris()
 iris.data
 iris.target

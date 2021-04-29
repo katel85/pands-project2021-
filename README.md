@@ -14,7 +14,8 @@
     - [Scatterplots of each Pair of Variables:](#scatterplots-of-each-pair-of-variables)
   - [Further Analysis:](#further-analysis)
     - [Unsupervised Learning:](#unsupervised-learning)
-- [**References:**](#references)
+    - [Application of knowledge into practice:](#application-of-knowledge-into-practice)
+- [References:](#references)
 
 
 ## Project Brief:
@@ -48,11 +49,11 @@ The Fisher Iris Data Set is multivariate dataset . The data set  is the measurem
 
 ![](IRIS%20FLOWERS.png)
 
-As previously mentioned Fisher used this dataset as an example of linear discriminant analysis (LCA). LCA is a method used in statistics and other fields, to find a linear combination of features that characterizes or separates two or more classes of objects or events. Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. It is, of course, entirely appropriate and in the spirit of scientific inquiry to make and publish comparisons of models and their performance on common data sets and the pattern recognition community has used Iris in perhaps a thousand papers for just this reason.
+As previously mentioned Fisher used this dataset as an example of linear discriminant analysis (LCA). LCA is a method used in statistics and other fields, to find a linear combination of features that characterizes or separates two or more classes of objects or events. Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. 
  
 ## What is Python and what is it used for:
 
-Python is a popular multi-purpose **programming language** widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics, including the widely used Python Data Analysis Library (also known as Pandas).For the most part, data analytics libraries in Python are at least somewhat derived from the NumPy library, which includes hundreds of mathematical calculations, operations, and functions.[2]
+Python is a popular multi-purpose **programming language** widely used for its flexibility, as well as its extensive collection of libraries, which are valuable for analytics and complex calculations.Python’s extensibility means that it has thousands of libraries dedicated to analytics.[2]
 
 Python is a general-purpose coding language—which means that, unlike HTML, CSS, and JavaScript, it can be used for other types of programming and software development besides web development. That includes back end development, software development, data science and writing system scripts among other things. 
 
@@ -73,7 +74,7 @@ CMDER- CMDER is a free software package, portable console emulator specifically 
 
 VSCODE- Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. All code for this project was written though this application. It is an amazing platform for someone beginning their programming/scripting journey as it is incredibly user friendly.
 
-GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that yu can access this cloud base service from any machine.[3] 
+GITHUB-GitHub is a cloud-based hosting service that lets you manage Git repositories. If you have open-source projects that use Git, then GitHub is designed to help you better manage them. This was used to store all the code that was written and the overall project. The beauty is that you can access this cloud base service from any machine.[3] 
 
 ## Iris Dataset Code and Analysis:
 
@@ -93,7 +94,7 @@ In order to analyse and visualize the Iris Dataset in VSCODE we  installed sever
 
 ### Dataset Download and Import:
 
-The start of analysis requires us to download the Iris dataset. This was taken from UCI Machine Learning Respository[5]. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import from. The dataset can be printed out as a data array set. Why researching the dataset I found that another way to download the dataset was through Seaborn as this has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
+The start of analysis requires us to download the Iris dataset. This was taken from UCI Machine Learning Respository[5]. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import from. The dataset can be printed out as a data array set. Why researching the dataset I found that another way to download the dataset was through Seaborn as this library has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
 
 
 ![](Plots/IrisDatasetImport.png)
@@ -102,7 +103,7 @@ The start of analysis requires us to download the Iris dataset. This was taken f
 
 ### Summary of each variable:
 
-The describe() function computes a summary of statistics pertaining to the dataframE coloums. The describe function was used on the entire dataset and separately computed for the three different species. Count, mean, std, min, 25%, 50%, 75% and max values are outputted for the 4 variables. From the summary below you can see the mean values for the 4 variables are quite similar but there is a marked difference in the mean for the petal length and width for Iris Setosa when compared with the other two species. Also while the standard  deviation is quite low for all species in petal length (the highest is Iris Virginica at 0.55) The collective group S.D is at 1.76 for petal length. 3 times higher than Iris Virginica. While the variation in the petal length is still optimum ( <1 C.V). This higher SD for the group stats indicates there is variation between the species for the petal length. 
+The describe() function computes a summary of statistics pertaining to the dataframe coloums. The describe function was used on the entire dataset and separately computed for the three different species. Count, mean, std, min, 25%, 50%, 75% and max values are outputted for the 4 variables. From the summary below you can see the mean values for the 4 variables are quite similar but there is a marked difference in the mean for the petal length and width for Iris Setosa when compared with the other two species. The standard  deviation is quite low for all species in petal length (the highest is Iris Virginica at 0.55). However the collective group S.D is at 1.76 for petal length. 3 times higher than Iris Virginica. While the variation in the petal length is still optimum ( <1 C.V). This higher SD for the group stats indicates there is variation between the species for the petal length. 
 
 
 
@@ -116,7 +117,7 @@ The describe() function computes a summary of statistics pertaining to the dataf
 ![](Hist%20Sepal%20Width.png)
 
 
-The Histogram plots show us the  frequency distribution for each of the variables. The code written showed histograms for each individual variable (sepal length, sepal width, petal length and petal width). The individual histogram plots per variable revealed that sepal length and width had a fairly normal distribution over they range of vales that were measured. The petal width and length did not follow a normal distribution pattern and were quite skewed with a Plateau or Multimodal Distribution. This distribution would make sense because this model is of the collective range of three different species.[6]
+The Histogram plots show us the  frequency distribution for each of the variables. The code written showed histograms for each individual variable (sepal length, sepal width, petal length and petal width). The individual histogram plots per variable revealed that sepal length and width had a fairly normal distribution over they range of vales that were measured. The petal width and length did not follow a normal distribution pattern and were quite skewed with a Plateau or Multimodal Distribution. This Multimodal distribution would make sense because this model is of the collective range of three different species.[6]
  
 
 
@@ -236,6 +237,17 @@ When we manually coded for accuracy above in the kmeans code we found to be the 
 
 
 
+### Application of knowledge into practice:
+
+In order to apply the different processes and methods into practice that I have learnt here I wanted to apply it to information I might deal with in my job as a laboratory scientist. I constructed a Covid Stats file with 4 numeric variables within three categories. The variables were Age, D-Dimer test result, Vitamin-D test result and Hospital LOS (Length of Stay). These variables were meaured for three categories of patients: 
+
+[1] Patients with Heart Disease
+
+[2] Patients with Asthma
+
+[3] Patients with No Condition
+
+The dataset was completely fictious and used solely to apply knowledge from this course into practice. 
 
 
 
@@ -292,7 +304,12 @@ When we manually coded for accuracy above in the kmeans code we found to be the 
 
 
 
-# **References:**
+
+
+
+
+
+# References:
 
 [1] [Iris Data](https://link.springer.com/chapter/10.1007/978-1-4612-5098-2_2)
 

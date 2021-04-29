@@ -229,7 +229,7 @@ plt.close()
 
 # Next code was written for scatterplots of the dataset
 
-#  This scatterplot is not species specific so does not render much information other than the distribution
+# This scatterplot is not species specific so does not render much information other than the distribution
 # overall of the paired variables.
 
 plt.figure()
@@ -271,8 +271,6 @@ plt.figure(figsize=(7,4))
 sns.heatmap(df.corr(),annot=True)
 plt.show()
 
-# Co Variance between 
-print (df.cov())
 
 #Above is code for a heatmap from the seaborn library. Heat maps display numeric tabular data 
 # where the cells are colored depending upon the contained value. Heat maps are great 
@@ -290,9 +288,9 @@ print (df.cov())
 
 
 #Multivariate Analysis:
-#sns.pairplot (df, hue = 'species')
+sns.pairplot (df, hue = 'species')
 
-#plt.show()
+plt.show()
 
 #sns.set(style='whitegrid')
 #sns.swarmplot(x="species", y="petal_length", data=df)
