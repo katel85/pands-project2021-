@@ -133,7 +133,4 @@ print(sm.confusion_matrix(iris.target, predictedY))
 # https://www.youtube.com/watch?v=asW8tp1qiFQ
 # https://web.microsoftstream.com/video/0685eed2-2dd6-490b-b6fc-cda8391f1db7
 # https://github.com/shunsvineyard/shunsvineyard/blob/main/machine-learning-basics-and-perceptron-learning-algorithm/unsupervised.py
-# http://seaborn.pydata.org/index.html
-# https://realpython.com/k-means-clustering-python/#conclusion
-# http://pandas.pydata.org/
-# http://matplotlib.org/2.0.0/index.html
+

@@ -25,7 +25,7 @@ set = str(setosa.describe())
 ver = str (versicolor.describe())
 gin = str(virginica.describe())
 
-print(data)
+#print(data)
 # check to see if all the species+variables are printed correctly.
 #print ("IRIS DATA SET SUMMARY")
 #print (data)
@@ -48,7 +48,7 @@ file.write("\n VIRGINICA DETAILS \n")
 file.write(gin)
 file.close()
 
-
+#Pandas: Reading CSV files in pandas https://web.microsoftstream.com/video/458c006e-142b-4fb2-b9b6-5d904ab6521f
 # https://rpubs.com/shailesh/iris-exploration-correlation
 
 #names of variables
@@ -280,36 +280,16 @@ plt.show()
 #https://www.datacamp.com/community/tutorials/introduction-machine-learning-python?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585186&utm_targetid=aud-299261629574:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=20487&gclid=Cj0KCQjw9_mDBhCGARIsAN3PaFMqV46OWTzY86tg_8vc0yBOr_Z2-IGgk8fhj_zxq5z-agq1-nRwRbYaAtOeEALw_wcB
 
 
-#sns.scatterplot(x='sepal_length', y='sepal_width', data=df, hue='species')
-#plt.title("Sepal Length vs Sepal Width") 
-#plt.xlabel("Sepal Length") 
-#plt.ylabel("Sepal Width")
-
-
-
 #Multivariate Analysis:
 sns.pairplot (df, hue = 'species')
 
 plt.show()
 
-#sns.set(style='whitegrid')
-#sns.swarmplot(x="species", y="petal_length", data=df)
-#plt.show()
-
-
-#fig=plt.gcf()
-#fig.set_size_inches(10,7)
-#fig=sns.stripplot(x='species',y='sepal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
-#plt.show()
-
-#plt.figure()
-#sns.stripplot(x='species',y='petal_length',data=df,jitter=True,edgecolor='gray',size=8,palette='winter',orient='v')
-#plt.show()
+# Above pairplot show each type of variables plotted against each other. 
 
 # https://medium.com/@neuralnets/data-visualization-with-python-and-seaborn-part-1-29c9478a8700
 
 
-#sns.stripplot(x='Species',y='SepalLengthCm',data=iris,jitter=True,edgecolor='gray')
 #plt.figure(figsize = (10, 10))
 #sns.lmplot(x="petal_length", y="sepal_length",data=df)
 #sns.lmplot(x="petal_length", y="sepal_width", data=df)

@@ -103,7 +103,7 @@ The start of analysis requires us to download the Iris dataset. This was taken f
 
 ### Summary of each variable:
 
-The describe() function computes a summary of statistics pertaining to the dataframe coloums. The describe function was used on the entire dataset and separately computed for the three different species. Count, mean, std, min, 25%, 50%, 75% and max values are outputted for the 4 variables. From the summary below you can see the mean values for the 4 variables are quite similar but there is a marked difference in the mean for the petal length and width for Iris Setosa when compared with the other two species. The standard  deviation is quite low for all species in petal length (the highest is Iris Virginica at 0.55). However the collective group S.D is at 1.76 for petal length. 3 times higher than Iris Virginica. While the variation in the petal length is still optimum ( <1 C.V). This higher SD for the group stats indicates there is variation between the species for the petal length. 
+The describe() function computes a summary of statistics pertaining to the dataframe coloums. The describe function was used on the entire dataset and separately computed for the three different species. Count, mean, std, min, 25%, 50%, 75% and max values are outputted for the 4 variables. From the summary below you can see the mean values for the 4 variables are quite similar but there is a marked difference in the mean for the petal length and width for Iris Setosa when compared with the other two species. The standard  deviation is quite low for all species in petal length (the highest is Iris Virginica at 0.55). However the collective group S.D is at 1.76 for petal length. 3 times higher than Iris Virginica. While the variation in the petal length is still optimum ( <1 C.V). This higher SD for the group stats indicates there is variation between the species for the petal length[25]. 
 
 
 
@@ -239,7 +239,7 @@ When we manually coded for accuracy above in the kmeans code we found to be the 
 
 ### Application of knowledge into practice:
 
-In order to apply the different processes and methods into practice that I have learnt here I wanted to apply it to information I might deal with in my job as a laboratory scientist. I constructed a Covid Stats file with 4 numeric variables within three categories. The variables were Age, D-Dimer test result, Vitamin-D test result and Hospital LOS (Length of Stay). These variables were meaured for three categories of patients: 
+In order to apply into practice the different processes that I have learnt here I wanted to apply it to information I might deal with in my job as a laboratory scientist. I constructed a Covid Stats file with 4 numeric variables within three categories. The variables were Age, D-Dimer test result, Vitamin-D test result and Hospital LOS (Length of Stay). These variables were measured for three categories of covid patients : 
 
 [1] Patients with Heart Disease
 
@@ -248,6 +248,25 @@ In order to apply the different processes and methods into practice that I have 
 [3] Patients with No Condition
 
 The dataset was completely fictious and used solely to apply knowledge from this course into practice. 
+
+![](Plots/coviddata.png)
+
+We can see from the description of the data above we have 150 counts on all the variables. The high standard deviation for all variables reveals there is alot of variance in this dataset.
+
+We created a heapmap to see whether there is any correclation between the variables.
+
+![](Plots/HEATMAPCOVID.png)
+
+We see here from the heatmap that there is quite high correlation between most variables apart from the Vitamin D which has negative correlation. 
+
+
+![](Plots/covidpairplot.png)
+
+
+
+
+
+
 
 
 
@@ -321,6 +340,8 @@ The dataset was completely fictious and used solely to apply knowledge from this
 
 [5] [Iris Data Set - UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris/)
 
+[6][Pandas: Reading CSV files in pandas](https://web.microsoftstream.com/video/458c006e-142b-4fb2-b9b6-5d904ab6521f)
+
 [6] [Box plot and Histogram exploration on Iris data](https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/)
 
 [7][Python IRIS Data visualization and explanation](https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation)
@@ -358,6 +379,8 @@ The dataset was completely fictious and used solely to apply knowledge from this
 [23][K-Means Elbow Method Code For Python](https://predictivehacks.com/k-means-elbow-method-code-for-python/)
 
 [24][Playing with IRIS data – KMeans clustering in python](https://constantgeeks.com/2017/01/11/playing-with-iris-data-kmeans-clustering-in-python/)
+
+[25][Pandas: Reading CSV files in pandas](https://web.microsoftstream.com/video/458c006e-142b-4fb2-b9b6-5d904ab6521f)
 
 
 
