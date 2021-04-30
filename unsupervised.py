@@ -36,8 +36,6 @@ plt.show()
 
 # code here is written for the sepal length and sepal width on a scatter plot with no species label. No pattern can be detected.
 # the second scatterplot of unlabelled petal length and petal width you can see a linear  cluster pattern from the data even though it is unlabelled.
-# code adpted from https://shunsvineyard.info/2017/10/22/machine-learning-basics-and-perceptron-learning-algorithm/
-
 # what the code above shows us is that is is hard to see the clusters and associations when the data is not 
 # labelled(i.e not supervised). Due to the fact that species used as a tag in the code we would not be interpreted the 
 # same way as if it were labelled with species
@@ -51,6 +49,7 @@ plt.show()
 # for this analysis we imported the iris dataset from sklearn as it is preloaded on
 # this library as a dataset array
 #pylint: disable=no-member
+#had to use above statement as I kept getting tuple errors on the code for iris
 iris = load_iris()
 iris.data
 iris.target
