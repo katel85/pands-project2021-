@@ -38,7 +38,7 @@ and write documentation and code in Python to investigate it.Research the data s
 
 ## Summary of Fisher's Iris Data Set.
 
-The Fisher Iris Data Set is multivariate dataset . The data set  is the measurement of the length and width of both sepals and petals of three different species of the Iris flower (Setosa, Versicolor and Virginica) . In total there are 150 measurements. The British statistician and biologist Ronald Fisher published this dataset in his 1936 paper “The use of multiple measurements in taxonomic problems” as an example of linear discriminant analysis. Initially data was only collected for two of the species (Setosa and Versicolor) to demonstate the dicriminant analysis. The Iris virginica data was collected to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.[1]. This is perhaps the best known database to be found in the pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. If you search for Iris Dataset on google you will actually get 3.9 million results. That alone will tell us how often this dataset is being used and researched by others. The reasons this dataset is so often used is: 
+The Fisher Iris Data Set is multivariate dataset . The data set  is the measurement of the length and width of both sepals and petals of three different species of the Iris flower (Setosa, Versicolor and Virginica) . In total there are 150 measurements. The British statistician and biologist Ronald Fisher published this dataset in his 1936 paper “The use of multiple measurements in taxonomic problems” as an example of linear discriminant analysis. Initially data was only collected for two of the species (Setosa and Versicolor) to demonstate the dicriminant analysis. The Iris virginica data was collected to extend Fisher’s technique and to test Randolph’s (1934) hypothesis that Iris versicolor is a polyploid hybrid of the two other species which is related to the fact that Iris setosa is a diploid species with 38 chromosomes, Iris virginica a tetraploid and Iris versicolor having 108 chromosomes is a hexaploid.[1]. This is perhaps the best known database to be found in pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. If you search for Iris Dataset on google you will actually get 3.9 million results. That alone will tell us how often this dataset is being used and researched by others. The reasons this dataset is so often used is: 
 
 -   Iris dataset contains 150 observations, it is small and simple but not trivial. For beginners this is a great place to start and learn some simple tricks to plot and analyze data.
 
@@ -46,9 +46,7 @@ The Fisher Iris Data Set is multivariate dataset . The data set  is the measurem
 
 - The data is real data, but apparently of good quality. In principle and in practice, test datasets could be synthetic and that might be necessary or useful to make a point. Nevertheless, few people object to real data.
 
-
-
-![](IRIS%20FLOWERS.png)
+![](Plots/IRIS%20FLOWERS.png)
 
 As previously mentioned Fisher used this dataset as an example of linear discriminant analysis (LCA). LCA is a method used in statistics and other fields, to find a linear combination of features that characterizes or separates two or more classes of objects or events. Linear Discriminant Analysis(LDA) is a very common technique used for supervised classification problems. Fisher's Iris data has become a popular set of labeled data for testing—and especially for comparing—clustering algorithms and classifiers. 
  
@@ -81,7 +79,7 @@ GITHUB-GitHub is a cloud-based hosting service that lets you manage Git reposito
 
 ### Libraries Used:
 
-In order to analyse and visualize the Iris Dataset in VSCODE we  installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python.[4]
+In order to analyse and visualize the Iris Dataset in VSCODE I installed several libraries. A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code. They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source libraries available in Python.[4]
 
 **Matplotlib**-is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
@@ -95,7 +93,7 @@ In order to analyse and visualize the Iris Dataset in VSCODE we  installed sever
 
 ### Dataset Download and Import:
 
-The start of analysis requires us to download the Iris dataset. This was taken from UCI Machine Learning Respository[5]. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format.Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import from. The dataset can be printed out as a data array set. Why researching the dataset I found that another way to download the dataset was through Seaborn as this library has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what we did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
+The start of analysis requires us to download the Iris dataset. This was taken from UCI Machine Learning Respository[5]. The data was downloaded from the Data Folder on this site through notepad and then saved as a csv file. I saved this in my pands-project folder in csv and txt format. Due to the fact the Iris Data Set is so often analysed using python is it actually built in to the sklearn datasets which is another library that you can import from. The dataset can be printed out as a data array set. Why researching the dataset I found that another way to download the dataset was through Seaborn as this library has built in datasets also. Seaborn is part of the PyData stack hence accepts Pandas’ data structures. However the brief of this project was to download so that is what I did. The dataset was defined as filename and then read in using the pandas lib and defined as df.
 
 
 ![](Plots/IrisDatasetImport.png)
@@ -130,7 +128,7 @@ The second type of histogram code written was for each variable but species spec
 
 Finally code was written for distplots which I think represented the data in a manner that variables could be distinguished per species 
 
-Using the displot above of petal length Iris.Setosa is easily disguishable from the other two species. There is a slight overlap on virginica and versicolor but ditinct distributions nonetheless.[11]
+Using the displot above of petal length Iris.Setosa is easily disguishable from the other two species. There is a slight overlap on virginica and versicolor but distinct distributions nonetheless.[11]
 
 ![](Plots/Petal_Width%20Distplot.png)
 
@@ -144,7 +142,7 @@ It would be correct to assume we could use this graphical analysis to definitive
 
 ![](Plots/scatterplotpaired.png)
 
-Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation[12]. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. As can be seen from the scatterplots above The sepal variables do not appear to have much correlation whereas the petal variables show a high degree of correlation.[13]
+Scatterplots show how much one variable is affected by another. The relationship between two variables is called their correlation[12]. The closer the data points come when plotted to making a straight line, the higher the correlation between the two variables, or the stronger the relationship. The initial scatterplot code generated the entire data and was not species specific. As can be seen from the scatterplots above the sepal variables do not appear to have much correlation(null relationship) whereas the petal variables show a high degree of correlation.[13]
 
 ![](Plots/Scatterplot%20PairVar%20Species.png)
 
@@ -183,12 +181,11 @@ Observations:
 
 ### Unsupervised Learning:
 
-While researching the Iris Dataset there was copious amount of information about supervised versus unsupervised learning. Supervised learning, also known as supervised machine learning, is a subcategory of machine learning and artificial intelligence. It is defined by its use of labeled datasets to train algorithms that classify data or predict outcomes accurately. Unsupervised learning is where you only have input data (X) and no corresponding output variables.The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data.
-These are called unsupervised learning because unlike supervised learning above there is no correct answers and there is no teacher. Algorithms are left to their own devises to discover and present the interesting structure in the data[18].
+While researching the Iris Dataset there was copious amount of information about supervised versus unsupervised learning. Supervised learning, also known as supervised machine learning, is a subcategory of machine learning and artificial intelligence. It is defined by its use of labeled datasets to train algorithms that classify data or predict outcomes accurately. Unsupervised learning is where you only have input data (X) and no corresponding output variables.The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data.The algorithms are left to their own devises to discover and present the interesting structure in the data[18].
 
 To look at some unsupervised learning in python using the Iris Dataset code was written that removed labels from the data. Species is not known. The sepal length and width was used to view on a scatterplot as was petal length and width[19].
 
-![Code for Unsupervised Scatterplots of Variables](Plots/unsupervised%20code.png)
+![](Plots/unsupervised%20code.png)
 
 
 ![](Plots/unsupervised%20plots.png)
@@ -198,7 +195,7 @@ The unsupervised scatterplots above show us that there seems to be no relationsh
 
 The k-means clustering method is an unsupervised machine learning technique used to identify clusters of data objects in a dataset[20].It is a clustering algorithm that is a simple unsupervised algorithm used to predict groups from an unlabeled dataset. In unsupervised machine learning, you don’t need to supervise the model. Here the model does its own work to find the patterns in the dataset. And then it automatically labels the unlabeled data[21].
 
-Code was written that imported the Iris dataset from Skitit Learn Library. The sepal and petal lengths and widths are in an array called iris.data. The species classifications for each of the 150 samples is in another array called iris.target. Iris.target is an array of integers used to represent the Iris species. 0=Setosa, 1=Versicolor, 2=Virginica. Below is the target array for the Iris Dataset.
+Code was written that imported the Iris dataset from Skitit Learn Library. The sepal and petal lengths and widths are in an array called iris.data. The species classifications for each of the 150 samples is in another array called iris.target. Iris.target is an array of integers used to represent the Iris species. 0=Setosa, 1=Versicolor, 2=Virginica. Below is the target array for the Iris Dataset as seen below.
 
 ![](Plots/irisdatasettarget.png)
 
@@ -213,7 +210,7 @@ The KMeans model object also assigns integer ids for the three clusters (n_clust
 
 This k-means model array looks very similar to the iris.target array. However there is some obvious misclassifications between the 2 and 0 targets.
 
-We then used code to visulaise this data in a scatterplot before and after the k-means classification.
+ Code was written to visulaise this data in a scatterplot before and after the k-means classification.
 
 ![](Plots/kmeanclassificationcodeplt.png)
 
@@ -221,7 +218,7 @@ We then used code to visulaise this data in a scatterplot before and after the k
 
 As can be seen from the plots above. The k-means clustering algorithm was quite accurate in predicting the clusters in the Iris Dataset. 
 
-The pandas crosstab and the sklearn metrics were both used to evaluate the quality of the output of a classifier on the iris data set.
+The pandas crosstab and the sklearn metrics confusion matrix were both used to evaluate the quality of the output of a classifier on the iris data set.
 
 ![](Plots/confusion%20matrix%20output.png)
 
@@ -234,13 +231,13 @@ The confusion matrix tells us that:
 [3] 36 samples of target 2 were identified correctly and 14 were misclassified as target 1.
 
 Also included in the code for the scatterplots was the accuracy score which was found to be 0.89%.
-When we manually coded for accuracy above in the kmeans code we found to be the same 0.89%. The k-means algorithm predicted to a high degree of accuracy the correct species type based on the cluster analysis.
+When I manually wrote the eqation for accuracy from the pandas crosstab in the kmeans code I found accuracy to be the same 0.89%. The k-means algorithm predicted to a high degree of accuracy the correct species type based on the cluster analysis.
 
 
 
 ### Application of knowledge into practice:
 
-In order to apply into practice the different processes that I have learnt here I wanted to apply it to information I might deal with in my job as a laboratory scientist. I constructed a Covid Stats file with 4 numeric variables within three categories. The variables were Age, D-Dimer test result, Vitamin-D test result and Hospital LOS (Length of Stay). These variables were measured for three categories of covid patients : 
+In order to apply into practice the different analysis skills that I have learnt here I wanted to apply it to information I might deal with in my job as a laboratory scientist. I constructed a Covid Stats file with 4 numeric variables within three categories. The variables were Age, D-Dimer test result, Vitamin-D test result and Hospital LOS (Length of Stay). These variables were measured for three categories of covid patients : 
 
 [1] Patients with Heart Disease
 
@@ -252,38 +249,38 @@ The dataset was completely fictious and used solely to apply knowledge from this
 
 ![](Plots/coviddata.png)
 
-We can see from the description of the data above we have 150 counts on all the variables. The high standard deviation for all variables reveals there is alot of variance in this dataset.
+I can see from the description of the data above we have 150 counts on all the variables. The high standard deviation for all variables reveals there is alot of variance in this dataset.
 
-We created a heapmap to see whether there is any correclation between the variables.
+I created a heapmap to see whether there is any correclation between the variables.
 
 ![](Plots/HEATMAPCOVID.png)
 
-We see here from the heatmap that there is quite high correlation between most variables apart from the Vitamin D which has negative correlation. 
+We see here from the heatmap that there is quite high correlation between most variables apart from the Vitamin D which has negative correlation[28]. 
 
 
 ![](Plots/covidpairplot.png)
 
-As we can see from the pairplot the variables are not linearly allinged but you can see very distinct clusters within each group. Looking at this we can see the Age and Hospital LOS seem to be the most correlated variables so we can look further at this with a trend line plot
+As we can see from the pairplot the variables are not linearly aligned but you can see very distinct clusters within each group. Looking at this we can see the Age and Hospital LOS seem to be the most linerly correlated variables so I can look further at this with a linear regression line plot.
 
 ![](Plots/HospitalLOS%20Age.png)
 
-As we can see from the plot above we can see the Hospital length of stay is very strongly corrleated with age and the older you are indicated a longer hospital stay.
+As I can see from the plot above we can see the Hospital length of stay is very strongly corrleated with age and the older you are indicated a longer hospital stay.
 
 ![](Plots/Hospitallos%20Condition.png)
 
-For hospital LOS versus condition we used a swarmplot which clearly separated the groups and showed us again here that your condition will affect the amount of time you are in hospital[26]. 
+For hospital LOS versus condition I used a swarmplot which clearly separated the groups and showed us again here that your condition will affect the amount of time you are in hospital[26]. Specifically heart disease will lengthen your stay in hospital to nearly double the amount of time an asthmatic would need hspital treatment. 
 
 
 ![](Plots/BoxplotCovid.png)
 
-Above we used a boxplot to visualize the covid patients with there corresponding conditions and was plotted against the age and Vitamin D variables. Box plots divide the data into sections that each contain approximately 25% of the data in that set. We knew from the summary statistics that there was a high degree of dispersion within the variables because of the high SD. We can clearly see the dispersion here in the boxplot and the outliers within the conditions.
+Above I used a boxplot to visualize the covid patients and their corresponding conditions. These were plotted against the Age and Vitamin D variables. Box plots divide the data into sections that each contain approximately 25% of the data in that set. We knew from the summary statistics that there was a high degree of dispersion within the variables because of the high SD. We can clearly see the dispersion here in the boxplot and the outliers within the conditions.
 
 This dataset on fictional Covid patients was very basic and simple and given more time I would have done more analysis on it to look at the negative correlation with the Vitamin D and look at other ways of visually displaying the data. However this was a very quick and simple experiment to play with the data and incorporate the skills we have learn thus far on python and data analysis[27].
 
 
 ## Conclusion:
 
-Ronald Fisher used the Iris Dataset to show an example of linear dicriminant analysis.One class Iris Setosa is linearly separable from the other 2 classes. Iris Virginica and Iris Versicolor are NOT linearly separable from each other. If Fisher had only used the original data collected for Setosa and Vesicolor he would have had the perfect model to linerly separate the two species. As a beginner programmer this was a great model to work and use many of the library resources available with the python programming language. I also enjoyed applying the knowledge learnt to some basic data that I might encounter in my work enviroment.  
+Ronald Fisher used the Iris Dataset to show an example of linear dicriminant analysis.One class Iris Setosa is linearly separable from the other 2 classes. Iris Virginica and Iris Versicolor are NOT linearly separable from each other. If Fisher had only used the original data collected for Setosa and Vesicolor he would have had the perfect model to linerly separate the two species. As a beginner programmer this was a great model to work with and use many of the library resources available with the python programming language. I also enjoyed applying the knowledge learnt to some basic data that I might encounter in my work enviroment.  
 
 
 # References:
@@ -344,6 +341,8 @@ Ronald Fisher used the Iris Dataset to show an example of linear dicriminant ana
 
 [27][Simple Box Plot and Swarm Plot in Python](https://onestopdataanalysis.com/box-and-plot-whisker/)
 
+[28][How to Easily Create Heatmaps in Python
+](https://www.statology.org/heatmap-python/)
 
 
 

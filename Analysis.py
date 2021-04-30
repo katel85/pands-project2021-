@@ -11,7 +11,7 @@ filename = 'IrisDataSet.txt'    # df stands for dataframe
 df = pd.read_csv(filename)      # this will read the data in as csv format from the txt file and
 # we will then base all of our analysis from this table.
 
-
+# separated the species within the df 
 setosa=df[df['species']=='setosa']
 versicolor=df[df['species']=='versicolor']
 virginica=df[df['species']=='virginica']
