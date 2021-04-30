@@ -15,6 +15,7 @@
   - [Further Analysis:](#further-analysis)
     - [Unsupervised Learning:](#unsupervised-learning)
     - [Application of knowledge into practice:](#application-of-knowledge-into-practice)
+  - [Conclusion:](#conclusion)
 - [References:](#references)
 
 
@@ -262,70 +263,27 @@ We see here from the heatmap that there is quite high correlation between most v
 
 ![](Plots/covidpairplot.png)
 
+As we can see from the pairplot the variables are not linearly allinged but you can see very distinct clusters within each group. Looking at this we can see the Age and Hospital LOS seem to be the most correlated variables so we can look further at this with a trend line plot
 
+![](Plots/HospitalLOS%20Age.png)
 
+As we can see from the plot above we can see the Hospital length of stay is very strongly corrleated with age and the older you are indicated a longer hospital stay.
 
+![](Plots/Hospitallos%20Condition.png)
 
+For hospital LOS versus condition we used a swarmplot which clearly separated the groups and showed us again here that your condition will affect the amount of time you are in hospital[26]. 
 
 
+![](Plots/BoxplotCovid.png)
 
+Above we used a boxplot to visualize the covid patients with there corresponding conditions and was plotted against the age and Vitamin D variables. Box plots divide the data into sections that each contain approximately 25% of the data in that set. We knew from the summary statistics that there was a high degree of dispersion within the variables because of the high SD. We can clearly see the dispersion here in the boxplot and the outliers within the conditions.
 
+This dataset on fictional Covid patients was very basic and simple and given more time I would have done more analysis on it to look at the negative correlation with the Vitamin D and look at other ways of visually displaying the data. However this was a very quick and simple experiment to play with the data and incorporate the skills we have learn thus far on python and data analysis[27].
 
 
+## Conclusion:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Ronald Fisher used the Iris Dataset to show an example of linear dicriminant analysis.One class Iris Setosa is linearly separable from the other 2 classes. Iris Virginica and Iris Versicolor are NOT linearly separable from each other. If Fisher had only used the original data collected for Setosa and Vesicolor he would have had the perfect model to linerly separate the two species. As a beginner programmer this was a great model to work and use many of the library resources available with the python programming language. I also enjoyed applying the knowledge learnt to some basic data that I might encounter in my work enviroment.  
 
 
 # References:
@@ -381,6 +339,10 @@ We see here from the heatmap that there is quite high correlation between most v
 [24][Playing with IRIS data – KMeans clustering in python](https://constantgeeks.com/2017/01/11/playing-with-iris-data-kmeans-clustering-in-python/)
 
 [25][Pandas: Reading CSV files in pandas](https://web.microsoftstream.com/video/458c006e-142b-4fb2-b9b6-5d904ab6521f)
+
+[26][Swarmplot using Seaborn in Python](https://www.geeksforgeeks.org/swarmplot-using-seaborn-in-python/)
+
+[27][Simple Box Plot and Swarm Plot in Python](https://onestopdataanalysis.com/box-and-plot-whisker/)
 
 
 

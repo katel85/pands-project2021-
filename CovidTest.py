@@ -54,17 +54,21 @@ sns.set(style='whitegrid')
 sns.swarmplot(x="Condition", y="HospitalLOS", data=df)
 plt.show()
 
+#code adapted from https://www.geeksforgeeks.org/swarmplot-using-seaborn-in-python/
+
 figboxplot, (ax1, ax2,) = plt.subplots(1,2, figsize=(11,9)) 
 sns.boxplot(x="Condition", y="Age", data=df, ax=ax1)
 sns.swarmplot(x="Condition", y="Age", data=df, color="k", ax=ax1)
 ax1.set_ylabel("Age", color="g")
-ax1.set_xlabel("Age", color='r')
+ax1.set_xlabel("Condition", color='r')
 
 sns.boxplot(x="Condition", y="VitaminD", data=df, ax=ax2)
 sns.swarmplot(x="Condition", y="VitaminD", data=df, color="k", ax=ax2)
 ax2.set_ylabel("VitaminD")  
-ax2.set_xlabel("VitaminD", color='r')
+ax2.set_xlabel("Condition", color='r')
 plt.show()
+
+#code adapted from ref: https://onestopdataanalysis.com/box-and-plot-whisker/
 
 
 
