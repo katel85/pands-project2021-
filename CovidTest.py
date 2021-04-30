@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-filename = 'covid.csv'    # df stands for dataframe
-df = pd.read_csv(filename)      # this will read the data in as csv format from the txt file and
+filename = 'covid.csv'    
+df = pd.read_csv(filename) # this will read the data in as csv format from the txt file and
 
 
 names = ['Age', 'VitaminD', 'DDimer', 'HospitalLOS','Condition']
@@ -13,7 +13,7 @@ data = str(df.describe())
 
 print(data)
 
-# This fictional dataset is has a ahigh degree of variance. The SD is very high in all 
+# This fictional dataset is has a a high degree of variance. The SD is very high in all 
 # the variables meaning the data is not clustered around the mean and is spread out.
 # While I could go back and change the data we will continue and see what kind of plots we will
 # see when the data reveals.
